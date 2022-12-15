@@ -68,7 +68,7 @@ class Calculator(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="calculator_user")
     exposure_duration_hours = models.IntegerField(default=0)
     exposure_duration_minutes = models.IntegerField(default=0, validators=[MaxValueValidator(59)])
-    created_on = models.DateTimeField(auto_now_add=True)
+
 
     class Meta:
         ordering = ['make_and_model']
@@ -79,7 +79,7 @@ class Calculator(models.Model):
         # Source: https://github.com/veryacademy/YT-Django-CBV-Mini-Series/blob/master/CreateView/books/models.py
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(f'{self.make_and_model}-{self.exposure_duration_hours}-{self.exposure_duration_minutes}')
+            self.slug = slugify(f'{self.author}-{self.make_and_model}-{self.exposure_duration_hours}-{self.exposure_duration_minutes}')
         return super().save(*args, **kwargs)
 
     def partial_exposure(self):
