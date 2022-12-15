@@ -1,11 +1,14 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Equipment, Calculator
-# from .forms import CalculatorForm, EquipmentForm
+from .forms import CalculatorForm, EquipmentForm
 
 
 def Index(request):
     return render(request, 'index.html', {})
+
+
+# Calculator Views .filter(author=request.user.uername)
 
 
 class CalculatorListView(generic.ListView):
@@ -14,8 +17,27 @@ class CalculatorListView(generic.ListView):
     template_name = 'calculator.html'
 
 
-# Equipment Views 
-# Line 34 - .objects.filter(user=request.user)
+class CalculatorCreateView(generic.CreateView):
+    model = Calculator
+    form_class = CalculatorForm
+    template_name = 'add-calculator.html'
+    success_url = '/calculator/'
+
+
+class CalculatorEditView(generic.UpdateView):
+    model = Calculator
+    form_class = CalculatorForm
+    template_name = 'edit-calculator.html'
+    success_url = '/calculator/'
+
+
+class CalculatorDeleteView(generic.DeleteView):
+    model = Calculator
+    template_name = 'delete-calculator.html'
+    success_url = '/calculator/'
+
+
+# Equipment Views
 
 
 class EquipmentListView(generic.ListView):
