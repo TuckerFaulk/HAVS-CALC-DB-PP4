@@ -8,13 +8,9 @@ admin.site.register(Categories)
 @admin.register(Equipment)
 class EquipmentAdmin(admin.ModelAdmin):
 
-    list_display = ('category', 'make_and_model', 'slug', 'created_on', 'approved')
+    list_display = ('category', 'make_and_model', 'slug', 'created_on')
     prepopulated_fields = {'slug': ('make_and_model',)}
-    list_filter = ('approved', 'created_on')
-    actions = ['approve_equipment']
-
-    def approve_equipment(self, request, queryset):
-        queryset.update(approved=True)
+    list_filter = ('created_on',)
 
 
 @admin.register(Calculator)

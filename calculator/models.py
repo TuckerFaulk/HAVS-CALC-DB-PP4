@@ -26,7 +26,6 @@ class Equipment(models.Model):
     test_date = models.DateField()
     equipment_image = CloudinaryField('image', default='placeholder')
     created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['category', 'make_and_model']

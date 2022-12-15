@@ -42,7 +42,7 @@ class CalculatorDeleteView(generic.DeleteView):
 
 class EquipmentListView(generic.ListView):
     model = Equipment
-    queryset = Equipment.objects.filter(approved=True)
+    queryset = Equipment.objects.all()
     template_name = 'equipment.html'
 
 
