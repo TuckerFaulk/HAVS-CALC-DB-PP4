@@ -50,6 +50,7 @@ The live link for the site can be found here - https://havs-calc-db-project.hero
 
 - HTML
 - CSS
+- JavaScript
 - Python
 - Django
 
@@ -109,6 +110,10 @@ The live link for the site can be found here - https://havs-calc-db-project.hero
 ## Unfixed Bugs
 
 <!-- There were no unfixed bugs identified during the testing of this site. -->
+When adding equipment to the calculator model in the admin site, if the data inserted is exactly the same as what already exists, a validation error will pop-up stating "Calculator with this Slug already exists". 
+
+1. This has been fixed when adding equipment to the calculator model from the live site (most likely the only place this would be added).
+2. From a UX perspective, it is unlikely that this error will ever occur as a user would just update the expsoure time of the existing instance, rather than having a duplication.
 
 ## Libraries and Programs Used
 

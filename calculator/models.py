@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.crypto import get_random_string
 from cloudinary.models import CloudinaryField
 from django.core.validators import MaxValueValidator
 from django.template.defaultfilters import slugify
@@ -75,10 +76,11 @@ class Calculator(models.Model):
     def __str__(self):
         return f"{self.make_and_model} used for {self.exposure_duration_hours} hours and {self.exposure_duration_minutes} minutes"
 
-        # Source: https://github.com/veryacademy/YT-Django-CBV-Mini-Series/blob/master/CreateView/books/models.py
+    # Source: https://github.com/veryacademy/YT-Django-CBV-Mini-Series/blob/master/CreateView/books/models.py
+    # Source for get_random_string: https://stackoverflow.com/questions/42429463/django-generating-random-unique-slug-field-for-each-model-object
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(f'{self.author}-{self.make_and_model}-{self.exposure_duration_hours}-{self.exposure_duration_minutes}')
+            self.slug = slugify(f'{self.author}-{self.make_and_model}-{self.exposure_duration_hours}-{self.exposure_duration_minutes}-{get_random_string(5)}')
         return super().save(*args, **kwargs)
 
     def partial_exposure(self):
