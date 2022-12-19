@@ -8,7 +8,7 @@ def Index(request):
     return render(request, 'index.html', {})
 
 
-# Calculator Views .filter(author=request.user.uername)
+# Calculator Views
 
 
 class CalculatorListView(generic.ListView):
@@ -16,6 +16,7 @@ class CalculatorListView(generic.ListView):
     queryset = Calculator.objects.order_by('make_and_model')
     template_name = 'calculator.html'
 
+    # Source: @Ed B_alum CI Project-Portfolio-4 Slack Channel
     def get_queryset(self):
         queryset = super(CalculatorListView, self).get_queryset()
         queryset = queryset.filter(author=self.request.user)
@@ -27,6 +28,11 @@ class CalculatorCreateView(generic.CreateView):
     form_class = CalculatorForm
     template_name = 'add-calculator.html'
     success_url = '/calculator/'
+
+    # Source: https://stackoverflow.com/questions/72033344/set-the-logged-in-user-to-created-by-for-django-createview
+    def form_valid(self, form):
+       form.instance.author = self.request.user
+       return super().form_valid(form)
 
 
 class CalculatorEditView(generic.UpdateView):
@@ -40,6 +46,12 @@ class CalculatorDeleteView(generic.DeleteView):
     model = Calculator
     template_name = 'delete-calculator.html'
     success_url = '/calculator/'
+
+# Source https://www.codegrepper.com/tpc/how+to+delete+all+instances+of+model+in+django
+def DeleteAll(request):
+    Calculator.objects.filter(author=request.user).delete()
+    context= {}
+    return render(request, 'calculator.html', context)
 
 
 # Equipment Views

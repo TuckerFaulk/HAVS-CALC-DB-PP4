@@ -5,7 +5,7 @@ from django import forms
 class CalculatorForm(forms.ModelForm):
     class Meta:
         model = Calculator
-        fields = ('make_and_model', 'author', 'exposure_duration_hours', 'exposure_duration_minutes',)
+        fields = ('make_and_model', 'exposure_duration_hours', 'exposure_duration_minutes',)
 
 
 class EquipmentForm(forms.ModelForm):
