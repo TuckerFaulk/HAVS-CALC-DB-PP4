@@ -16,6 +16,11 @@ class CalculatorListView(generic.ListView):
     queryset = Calculator.objects.order_by('make_and_model')
     template_name = 'calculator.html'
 
+    def get_queryset(self):
+        queryset = super(CalculatorListView, self).get_queryset()
+        queryset = queryset.filter(author=self.request.user)
+        return queryset
+
 
 class CalculatorCreateView(generic.CreateView):
     model = Calculator

@@ -115,6 +115,8 @@ When adding equipment to the calculator model in the admin site, if the data ins
 1. This has been fixed when adding equipment to the calculator model from the live site (most likely the only place this would be added).
 2. From a UX perspective, it is unlikely that this error will ever occur as a user would just update the expsoure time of the existing instance, rather than having a duplication.
 
+The solution to fix this on the admin site is for the admin to slightly change the slug themselves and this will then work.
+
 ## Libraries and Programs Used
 
 <!-- - Github: Store Repository
