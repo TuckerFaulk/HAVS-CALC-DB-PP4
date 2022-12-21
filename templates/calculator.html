@@ -7,9 +7,7 @@
   <div class="row m-4">
     <!-- Equipment Detail Column -->
     <div class="col-12 d-flex justify-content-end">
-      <a class="btn btn-primary" href="{% url 'add_calculator' %}" role="button"><i class="fa-solid fa-plus"></i> Add Equipment</a>
-      <button class="btn btn-primary" id="calc-daily-exposure"><i class="fa-solid fa-calculator"></i> Calculate Daily Exposure</button>
-      <a class="btn btn-primary" href="{% url 'delete_all' %}" role="button">Reset</a>
+      <a class="btn" href="{% url 'delete_all' %}" role="button"><i class="fa-solid fa-rotate-right"></i> Reset</a>
     </div>
   </div>
 </div>
@@ -39,12 +37,15 @@
                       <td>{{ equipment.make_and_model.time_to_eav }}</td>
                       <td>{{ equipment.make_and_model.time_to_elv }}</td>
                       <td>{{ equipment.exposure_duration_hours }} Hours {{ equipment.exposure_duration_minutes }} Minutes</td>
-                      <td><a href="{% url 'edit_calculator' equipment.slug %}"><i class="fa-solid fa-pen-to-square"></i></a></td> 
-                      <td><a href="{% url 'delete_calculator' equipment.slug %}"><i class="fa-solid fa-trash"></i></td>
+                      <td><a href="{% url 'edit_calculator' equipment.slug %}"><i class="btn fa-solid fa-pen-to-square"></i></a></td> 
+                      <td><a href="{% url 'delete_calculator' equipment.slug %}"><i class="btn fa-solid fa-trash"></i></td>
                     </tr>
                   {% endfor %}
                   </tbody>
                 </table>
+                <div class="col-12 d-flex justify-content-end">
+                  <a class="btn" href="{% url 'add_calculator' %}" role="button"><i class="fa-solid fa-plus"></i> Add Equipment</a>
+                </div>
       </div>
       <div class="col-2">
         <table class="table">
@@ -80,7 +81,7 @@
         <tbody>
           <tr>
             <td>
-              <ul>
+              <ul class="text-left">
                 <li>Identify the significant sources of vibration.</li>
                 <li>Prioritise them as contributors to risk (ie operator exposure).</li>
                 <li>Identify and evaluate solutions in terms of practicability and cost.</li>
@@ -89,7 +90,7 @@
                 <li>Define management responsibilities and allocate adequate resources to implement controls, evaluate them and monitor progress.</li>
               </ul>
             </td>
-            <td id="specific-controls"></td>
+            <td class="text-left" id="specific-controls"></td>
           </tr>
         </tbody>
       </table>
@@ -120,7 +121,10 @@
         </thead>
         <tbody>
           <tr>
-            <td id="daily-exposure">0.0</td>
+            <td id="daily-exposure">
+              0.0
+              <button class="btn" id="calc-daily-exposure"><i class="fa-solid fa-calculator"></i> Calculate Daily Exposure</button>
+            </td>
             <td id="daily-exposure-pts">0</td>
           </tr>
         </tbody>

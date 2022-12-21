@@ -3,14 +3,14 @@
 {% block content %}
 
 <div class="container">
-  <div class="row m-4">
+  <div class="row m-4 justify-content-center">
     {% for equipment in equipment_list %}
     <div class="card" style="width: 18rem;"> 
       <!-- Add Image Placeholder -->
       <img src="{{ equipment.equipment_image.url }}" class="card-img-top" alt="">
-      <div class="card-body">
+      <div class="card-body text-center">
         <h5 class="card-title">{{ equipment.category }} - {{ equipment.make_and_model }}</h5>
-        <a href="{% url 'equipment_detail' equipment.slug %}" class="btn btn-primary">View Details</a>
+        <a href="{% url 'equipment_detail' equipment.slug %}" class="btn"><i class="fa-solid fa-circle-info"></i> View Details</a>
       </div>
     </div>
     {% endfor %}
@@ -21,10 +21,10 @@
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="btn page-link">&laquo; PREV </a></li>
             {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            <li><a href="?page={{ page_obj.next_page_number }}" class="btn page-link"> NEXT &raquo;</a></li>
 
             {% endif %}
         </ul>

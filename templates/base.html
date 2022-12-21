@@ -13,7 +13,7 @@
 
     <title>HAVS CALC DB</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     
     <!-- Navigation -->
     <nav>
@@ -39,7 +39,7 @@
                   </li>
                   {% else %}
                   <li class="nav-item">
-                    <a class="nav-link active" href="">Home</a>
+                    <a class="nav-link active" href="{% url 'index' %}">Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
@@ -60,9 +60,9 @@
     {% endblock content %}
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer mt-auto">
       <div class="row blue">
-        <div class="col text-center p-3 m-0">
+        <div class="col text-center pt-3 m-0">
         <p>Created by TuckerFaulk</p>
         </div>
       </div>

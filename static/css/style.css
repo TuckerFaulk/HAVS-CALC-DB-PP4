@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Raleway:wght@400&display=swap');
+
 body {
     background-color: #F9FAFC;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Headings */
+
+h1, h2, h3 {
+    font-family: 'Permanent Marker', sans-serif;
 }
 
 /* Colors */
@@ -14,17 +23,33 @@ body {
 }
 
 .maroon {
-    color: rgb(50.2%, 0%, 0%);
+    color: #002C5A;
 }
 
 /* Header */
 
 #logo {
-    font-size: x-large;
+    font-size: xx-large;
+    font-family: 'Permanent Marker', sans-serif;
+    color: white;
+    /* letter-spacing: 1px; */
+    /* text-shadow: 3px 0 0 #3A4856, 0 -3px 0 #3A4856, 0 3px 0 #3A4856, -3px 0 0 #3A4856; */
 }
 
 li > a {
-    color: black;
+    /* color: black; */
+    /* color: rgb(50.2%, 0%, 0%); */
+    color: rgb(255, 198, 89);
+    color: white;
+    /* text-shadow: 3px 0 0 #3A4856, 0 -3px 0 #3A4856, 0 3px 0 #3A4856, -3px 0 0 #3A4856; */
+    /* color: rgb(255, 198, 89); */
+    font-family: 'Permanent Marker', sans-serif;
+    font-size: x-large;
+}
+
+li > a:hover {
+    color: white;
+    text-shadow: 3px 0 0 #002C5A, 0 -3px 0 #002C5A, 0 3px 0 #002C5A, -3px 0 0 #002C5A;
 }
 
 /* Jumbotron */
@@ -35,13 +60,20 @@ li > a {
     height: 500px;
 }
 
-/* Project Detail */
+/* Calculator */
 
 #equipment-list {
     height: 97.5px;
 }
 
 .table thead th {
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    /* color: #002C5A; */
+}
+
+.table {
     text-align: center;
     vertical-align: middle;
 }
@@ -56,4 +88,22 @@ li > a {
 
 #equip-detail-img {
     height: 500px;
+}
+
+/* Footer */
+
+.footer {
+    padding: 0;
+}
+
+/* Buttons */
+
+.btn {
+    border: 0;
+    border-radius: 15px;
+    color: white;
+    /* color: rgb(255, 198, 89); */
+    background-color: rgb(108, 171, 221);
+    /* background-color: rgb(255, 198, 89); */
+    /* background-color: rgb(50.2%, 0%, 0%); */
 }
