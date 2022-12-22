@@ -66,7 +66,7 @@ class Calculator(models.Model):
     make_and_model = models.ForeignKey(Equipment, on_delete=models.CASCADE, related_name="equipment_make_and_model")
     slug = models.SlugField(max_length=80, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="calculator_user")
-    exposure_duration_hours = models.IntegerField(default=0)
+    exposure_duration_hours = models.IntegerField(default=0, validators=[MaxValueValidator(23)])
     exposure_duration_minutes = models.IntegerField(default=0, validators=[MaxValueValidator(59)])
 
 

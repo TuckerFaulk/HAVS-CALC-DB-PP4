@@ -124,7 +124,8 @@ The solution to fix this on the admin site is for the admin to slightly change t
 - Google Chrome, Microsoft Edge, Mozilla Firefox, Safari: Site testing on alternative browsers
 - Microsoft OneNote: Planning notes for the project
 - Am I Responsive: Screenshots of the final project for the README file
-- Lucid Charts: Planning the site process with a flow diagram -->
+- Lucid Charts: Planning the site process with a flow diagram
+- Photoshop -->
 
 # Deployment
 
