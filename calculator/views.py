@@ -1,4 +1,6 @@
 from django.shortcuts import render, get_object_or_404
+from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib import messages
 from django.views import generic, View
 from .models import Equipment, Calculator
 from .forms import CalculatorForm, EquipmentForm
@@ -23,11 +25,12 @@ class CalculatorListView(generic.ListView):
         return queryset
 
 
-class CalculatorCreateView(generic.CreateView):
+class CalculatorCreateView(messages.views.SuccessMessageMixin, generic.CreateView):
     model = Calculator
     form_class = CalculatorForm
     template_name = 'add-calculator.html'
     success_url = '/calculator/'
+    success_message = "Equipment successfully added!"
 
     # Source: https://stackoverflow.com/questions/72033344/set-the-logged-in-user-to-created-by-for-django-createview
     def form_valid(self, form):
@@ -35,22 +38,29 @@ class CalculatorCreateView(generic.CreateView):
         return super().form_valid(form)
 
 
-class CalculatorEditView(generic.UpdateView):
+class CalculatorEditView(messages.views.SuccessMessageMixin, generic.UpdateView):
     model = Calculator
     form_class = CalculatorForm
     template_name = 'edit-calculator.html'
     success_url = '/calculator/'
+    success_message = "Equipment successfully edited!"
 
 
 class CalculatorDeleteView(generic.DeleteView):
     model = Calculator
     template_name = 'delete-calculator.html'
     success_url = '/calculator/'
+    success_message = "Equipment was deleted successfully."
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super(CalculatorDeleteView, self).delete(request, *args, **kwargs)
 
 
 # Source https://www.codegrepper.com/tpc/how+to+delete+all+instances+of+model+in+django
 def DeleteAll(request):
     Calculator.objects.filter(author=request.user).delete()
+    messages.add_message(request, messages.SUCCESS, 'You have successfully reset your calculator!')
     context = {}
     return render(request, 'calculator.html', context)
 

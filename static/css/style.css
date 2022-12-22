@@ -52,6 +52,15 @@ li > a:hover {
     text-shadow: 3px 0 0 #002C5A, 0 -3px 0 #002C5A, 0 3px 0 #002C5A, -3px 0 0 #002C5A;
 }
 
+/* Alert Messages */
+
+#msg {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+}
+
+
 /* Jumbotron */
 
 .jumbotron {
@@ -73,11 +82,6 @@ li > a:hover {
     /* color: #002C5A; */
 }
 
-.table {
-    text-align: center;
-    vertical-align: middle;
-}
-
 /* Equipment List */
 
 .card img {
@@ -94,6 +98,10 @@ li > a:hover {
 
 .footer {
     padding: 0;
+}
+
+.fa-github {
+    font-size: large;
 }
 
 /* Buttons */

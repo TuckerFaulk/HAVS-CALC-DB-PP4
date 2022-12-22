@@ -32,8 +32,8 @@
                   {% for equipment in calculator_list %}
                     <tr>
                       <td>{{ equipment.make_and_model.category }} - {{ equipment.make_and_model }}</td>
-                      <td>{{ equipment.make_and_model.vibration_magnitude }}</td>
-                      <td>{{ equipment.make_and_model.exp_pts_per_hour }}</td>
+                      <td class="text-center">{{ equipment.make_and_model.vibration_magnitude }}</td>
+                      <td class="text-center">{{ equipment.make_and_model.exp_pts_per_hour }}</td>
                       <td>{{ equipment.make_and_model.time_to_eav }}</td>
                       <td>{{ equipment.make_and_model.time_to_elv }}</td>
                       <td>{{ equipment.exposure_duration_hours }} Hours {{ equipment.exposure_duration_minutes }} Minutes</td>
@@ -58,8 +58,8 @@
           <tbody>
           {% for equipment in calculator_list %}
             <tr>
-              <td class="partial-exposure">{{ equipment.partial_exposure }}</td>
-              <td class="partial-exposure-pts">{{ equipment.partial_exposure_pts }}</td>
+              <td class="partial-exposure text-center">{{ equipment.partial_exposure }}</td>
+              <td class="partial-exposure-pts text-center">{{ equipment.partial_exposure_pts }}</td>
             </tr>
           {% endfor %}
           </tbody>
@@ -105,7 +105,7 @@
         </thead>
         <tbody>
           <tr>
-            <td class="font-weight-bold" id="exposure-warning"></td>
+            <td class="font-weight-bold text-center" id="exposure-warning"></td>
           </tr>
         </tbody>
       </table>
@@ -121,11 +121,11 @@
         </thead>
         <tbody>
           <tr>
-            <td id="daily-exposure">
-              0.0
+            <td class="text-center" id="daily-exposure">
               <button class="btn" id="calc-daily-exposure"><i class="fa-solid fa-calculator"></i> Calculate Daily Exposure</button>
+              <span class="invisible">0.0</span>
             </td>
-            <td id="daily-exposure-pts">0</td>
+            <td class="text-center" id="daily-exposure-pts">0</td>
           </tr>
         </tbody>
       </table>

@@ -8,6 +8,12 @@ $('#exampleModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
 })
 
+// Alert Meassage TimeOut
+
+setTimeout(function () {
+  $('#msg').alert('close')
+}, 2500);
+
 // Calculate Daily Exposure
 
 $('#calc-daily-exposure').click(function () {

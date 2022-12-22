@@ -54,6 +54,37 @@
       </div>
     </nav>
 
+<!-- Alert Messages: Source Code Institute I Think Therefore I Blog Videos -->
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-8 offset-md-2">
+          {% for message in messages %}
+          <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+            {{ message | safe }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          {% endfor %}
+      </div>
+  </div>
+</div>
+
+
+<!-- <div class="container">
+  <div class="row">
+      <div class="col-md-8 offset-md-2">
+          {% for message in messages %}
+          <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
+              {{ message | safe }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% endfor %}
+      </div>
+  </div>
+</div> -->
+
     <!-- Page Content -->
     {% block content %}
     
@@ -63,7 +94,10 @@
     <footer class="footer mt-auto">
       <div class="row blue">
         <div class="col text-center pt-3 m-0">
-        <p>Created by TuckerFaulk</p>
+        <p>
+          Created by TuckerFaulk
+          <a class="btn" href="https://github.com/TuckerFaulk" target="_blank" role="button"><i class="fa-brands fa-github"></i></a>
+        </p>
         </div>
       </div>
     </footer>
