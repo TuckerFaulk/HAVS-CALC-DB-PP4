@@ -156,3 +156,27 @@ The live link for the site can be found here -  -->
 ## Content
 
 Resources Used:
+
+Images:
+Atlas Copco Cobra Mk1 -	https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.forconstructionpros.com%2Fconcrete%2Fequipment-products%2Fproduct%2F12104270%2Fatlas-copco-construction-equipment-atlas-copco-releases-new-versions-of-cobra-proe-and-cobra-tte-gas-breakers&psig=AOvVaw02K3AsISi9o6f2QEAakx5M&ust=1671874761415000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCJD91_24j_wCFQAAAAAdAAAAABAr
+Waker BS50-2 -	https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.expresstools.co.uk%2Fwacker-neuson-bs50-2-trench-363924.html&psig=AOvVaw0nXF9Pj51CtTgWEkd_gcyc&ust=1671874852756000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCNiKm6m5j_wCFQAAAAAdAAAAABAE
+Bomag BVP18/45 -	https://www.acmetools.com/177-in-single-direction-vibratory-plate-honda-gx160-engine-bvp-18-45/402000002747.html
+Husqvarna LG164 -	https://www.nixonhire.co.uk/sales/p/plate-compactor-husqvarna-lg164
+Waker BPS1030A -	https://tjcplant.co.uk/product/wacker-neuson-single-direction-vibratory-plate-bps1030a/
+Makita DDF481 -	https://www.idealo.co.uk/compare/5659819/makita-ddf481.html
+Hycon HCD50-200 -	https://dtwtools.co.uk/product/hycon-hcd50-200-core-drill/
+Makita BHR202 -	https://www.amazon.co.uk/Makita-DHR202-Naked-Rotary-Hammer/dp/B001EYUQP0
+Makita HR2630 -	https://www.reevoo.com/p/makita-hr2630-rotary-hammer-sds-26mm-rotary-hammer-drill-3-mode-26mm-with-accessories-240v
+Milwaukee M12CH -	https://www.toolstop.co.uk/milwaukee-m12ch-0-fuel-brushless-sds-hammer-drill-body-only/
+Milwaukee M18CHX -	https://www.powertoolmate.co.uk/power-tools/milwaukee/cordless-sds-drills/milwaukee-m18chx-0-m18-fuel-18v-sds-plus-hammer-drill-bare-unit.htm
+Makita DGA452 -	https://www.protrade.co.uk/product/makita-dga452-lxt-18v-115mm-angle-grinder-c-w-2-x-5-0ah-batt/
+Mecalac MBR71 -	https://www.mecalac.com/en/news-and-press/mecalac-completely-redesigns-its-mbr71-single-drum-compaction-roller.html
+Fein AMM500 -	https://www.machinemart.co.uk/p/fein-cordless-multimaster-amm-500-plus-select-/
+Stihl MS181C -	https://www.radmoretucker.co.uk/shop/garden-machinery/chainsaws-tree-care/petrol-chainsaws/stihl-ms-181-c-be-petrol-chainsaw/
+Stihl MS362C -	https://honeybros.com/shop/machinery/chainsaws/petrol-chainsaws/forestry-petrol-chainsaws/stihl-ms-362-c-m-chainsaw/
+Stihl MSA 200C -	https://shop.stihl.co.uk/products/msa-200-c-b-cordless-chainsaw
+Belle Duo 350X -	https://www.toolstoday.co.uk/belle-duo-350x-petrol-twin-blade-floor-saw
+Belle Ranger 450 -	https://www.machinemart.co.uk/p/altrad-belle-ranger-450-lombardini-floor-saw/
+Bosch GST150BCE -	https://www.toolstop.co.uk/bosch-gst150bce-150mm-780w-bow-handle-jigsaw-110v-p12559/
+Makita DTW190 -	https://www.tooled-up.com/makita-dtw190-18v-cordless-lxt-1-2-drive-impact-wrench/prod/291078/
+
