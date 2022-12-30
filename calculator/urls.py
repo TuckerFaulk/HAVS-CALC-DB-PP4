@@ -5,6 +5,7 @@ from django.urls import path
 urlpatterns = [
     path('', views.Index, name='index'),
     path('calculator/', views.CalculatorListView.as_view(), name='calculator_list'),
+    path('calculator/<slug:slug>/', views.CalculatorDetail.as_view(), name='calculator_detail'),
     path('calculator/delete-all', views.DeleteAll, name='delete_all'),
     path('calculator/add/', views.CalculatorCreateView.as_view(), name='add_calculator'),
     path('calculator/<slug:slug>/edit', views.CalculatorEditView.as_view(), name='edit_calculator'),

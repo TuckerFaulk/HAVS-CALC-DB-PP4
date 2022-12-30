@@ -25,6 +25,19 @@ class CalculatorListView(generic.ListView):
         return queryset
 
 
+class CalculatorDetail(View):
+
+    def get(self, request, slug, *args, **kwargs):
+        calculator_info = Calculator.objects.all()
+        calculator = get_object_or_404(calculator_info, slug=slug)
+
+        return render(
+            request,
+            "calculator-detail.html",
+            {'calculator': calculator},
+        )
+
+
 class CalculatorCreateView(messages.views.SuccessMessageMixin, generic.CreateView):
     model = Calculator
     form_class = CalculatorForm

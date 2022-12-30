@@ -77,10 +77,11 @@ h1, h2, h3 {
     height: 350px;
 }
 
-/* Equipment Detail */
+/* Equipment and Calculator Detail */
 
-#equip-detail-img {
+#detail-img {
     height: 500px;
+    width: 400px;
 }
 
 /* Footer */

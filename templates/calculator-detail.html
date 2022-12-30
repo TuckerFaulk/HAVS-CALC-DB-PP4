@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row m-4">
+    <!-- Equipment Detail Column -->
+    <div class="col-12 d-flex justify-content-end">
+      <a class="btn btn-primary" href="{% url 'calculator_list' %}" role="button">Back</a>
+    </div>
+  </div>
+
+
+  <div class="row m-4 d-flex align-items-center">
+    <div class="col-8">
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item blue">Category - Make and Model</li>
+        <li class="list-group-item">{{ calculator.make_and_model.category }} - {{ calculator.make_and_model }}</li>
+      </ul>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item blue">Vibration Magnitude</li>
+        <li class="list-group-item">{{ calculator.make_and_model.vibration_magnitude }}</li>
+      </ul>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item blue">Exposure Duration</li>
+        <li class="list-group-item">{{ calculator.exposure_duration_hours }} Hours {{ calculator.exposure_duration_minutes }} Minutes</li>
+      </ul>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item blue">Exposure Points per Hour</li>
+        <li class="list-group-item">{{ calculator.make_and_model.exp_pts_per_hour }}</li>
+      </ul>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item blue">Time to reach EAV 2.5 m/s&#178; A(8)</li>
+        <li class="list-group-item">{{ calculator.make_and_model.time_to_eav }}</li>
+      </ul>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item blue">Time to reach ELV 5 m/s&#178; A(8)</li>
+        <li class="list-group-item">{{ calculator.make_and_model.time_to_elv }}</li>
+      </ul>
+      <br>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item blue">Partial Exposure m/s² A(8)</li>
+        <li class="list-group-item">{{ calculator.partial_exposure }}</li>
+      </ul>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item blue">Partial Exposure Points</li>
+        <li class="list-group-item">{{ calculator.partial_exposure_pts }}</li>
+      </ul>
+    </div>
+    <div class="col-4">
+      <img id="detail-img" src="{{ calculator.make_and_model.equipment_image.url }}" alt="{{ equipment.equipment_image.url }}">
+    </div>
+  </div>
+</div>
+
+{%endblock%}
