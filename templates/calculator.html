@@ -14,18 +14,16 @@
 
 <div class="container-fluid">
   <div class="row m-4">
-    <div class="col-10">
+    <div class="col-lg-10 col-sm-4">
       <table class="table">
         <thead class="blue">
           <tr id="equipment-list">
             <th>Category - Make and Model</th>
             <th>Vibration Magnitude</th>
-            <th>Exposure Points per Hour</th>
-            <th>Time to reach EAV 2.5 m/s&#178; A(8)</th>
-            <th>Time to reach ELV 5 m/s&#178; A(8)</th>
+            <th class="mobile">Exposure Points per Hour</th>
+            <th class="mobile">Time to reach EAV 2.5 m/s&#178; A(8)</th>
+            <th class="mobile">Time to reach ELV 5 m/s&#178; A(8)</th>
             <th>Exposure Duration</th>
-            <th></th>
-            <th></th>
             <th></th>
           </tr>
         </thead>
@@ -34,15 +32,15 @@
           <tr>
             <td>{{ equipment.make_and_model.category }} - {{ equipment.make_and_model }}</td>
             <td class="text-center">{{ equipment.make_and_model.vibration_magnitude }}</td>
-            <td class="text-center">{{ equipment.make_and_model.exp_pts_per_hour }}</td>
-            <td>{{ equipment.make_and_model.time_to_eav }}</td>
-            <td>{{ equipment.make_and_model.time_to_elv }}</td>
+            <td class="text-center mobile">{{ equipment.make_and_model.exp_pts_per_hour }}</td>
+            <td class="mobile">{{ equipment.make_and_model.time_to_eav }}</td>
+            <td class="mobile">{{ equipment.make_and_model.time_to_elv }}</td>
             <td>{{ equipment.exposure_duration_hours }} Hours {{ equipment.exposure_duration_minutes }} Minutes</td>
-            <td><a href="{% url 'calculator_detail' equipment.slug %}"><i class="btn fa-solid fa-circle-info"></i></a>
+            <td>
+              <a href="{% url 'calculator_detail' equipment.slug %}"><i class="btn fa-solid fa-circle-info"></i></a>
+              <a href="{% url 'edit_calculator' equipment.slug %}"><i class="btn fa-solid fa-pen-to-square"></i></a>
+              <a href="{% url 'delete_calculator' equipment.slug %}"><i class="btn fa-solid fa-trash"></i></a>
             </td>
-            <td><a href="{% url 'edit_calculator' equipment.slug %}"><i class="btn fa-solid fa-pen-to-square"></i></a>
-            </td>
-            <td><a href="{% url 'delete_calculator' equipment.slug %}"><i class="btn fa-solid fa-trash"></i></td>
           </tr>
           {% endfor %}
         </tbody>
@@ -52,7 +50,10 @@
           Equipment</a>
       </div>
     </div>
-    <div class="col-2">
+    
+    <div class="col-sm-2"></div>
+
+    <div class="col-lg-2 col-sm-4">
       <table class="table">
         <thead class="blue">
           <tr>
@@ -74,8 +75,8 @@
 
   <!-- Project Controls and Daily Exposure -->
 
-  <div class="row m-4 mb-5">
-    <div class="col-8">
+  <div class="row m-4 mb-5" id="flex">
+    <div class="col-lg-8 col-sm-12" id="a">
       <table class="table">
         <thead class="blue">
           <tr>
@@ -102,7 +103,7 @@
       </table>
     </div>
 
-    <div class="col-2">
+    <div class="col-lg-2 col-sm-6" id="b">
       <table class="table">
         <thead class="blue">
           <tr>
@@ -117,7 +118,7 @@
       </table>
     </div>
 
-    <div class="col-2">
+    <div class="col-lg-2 col-sm-6" id="c">
       <table class="table">
         <thead class="blue">
           <tr>

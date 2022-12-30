@@ -112,3 +112,21 @@ h1, h2, h3 {
     background-color: white;
     color: rgb(108, 171, 221);
 }
+
+/* Media Queries */
+
+/* For small screen size from 700px wide and down*/
+
+@media screen and (max-width: 992px) {
+
+    .mobile {
+        display: none;
+    }
+
+    #flex { 
+        display: flex;
+      }
+      #flex > #a { order: 3; }
+      #flex > #b { order: 1; }
+      #flex > #c { order: 2; }
+}
