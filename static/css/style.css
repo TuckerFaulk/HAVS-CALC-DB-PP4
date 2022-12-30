@@ -17,16 +17,7 @@ h1, h2, h3 {
     background-color: rgb(108, 171, 221);
 }
 
-.text-gold {
-    color: rgb(255, 198, 89);
-    font-weight: bolder;
-}
-
-.maroon {
-    color: #002C5A;
-}
-
-/* Header */
+/* Header & Navbar */
 
 #logo {
     font-size: xx-large;
@@ -36,7 +27,7 @@ h1, h2, h3 {
     /* text-shadow: 3px 0 0 #3A4856, 0 -3px 0 #3A4856, 0 3px 0 #3A4856, -3px 0 0 #3A4856; */
 }
 
-li > a {
+.nav-link {
     /* color: black; */
     /* color: rgb(50.2%, 0%, 0%); */
     color: rgb(255, 198, 89);
@@ -47,7 +38,7 @@ li > a {
     font-size: x-large;
 }
 
-li > a:hover {
+.nav-link:hover {
     color: white;
     text-shadow: 3px 0 0 #002C5A, 0 -3px 0 #002C5A, 0 3px 0 #002C5A, -3px 0 0 #002C5A;
 }
@@ -98,6 +89,7 @@ li > a:hover {
 
 .footer {
     padding: 0;
+    overflow-x: hidden;
 }
 
 .fa-github {
@@ -110,8 +102,14 @@ li > a:hover {
     border: 0;
     border-radius: 15px;
     color: white;
-    /* color: rgb(255, 198, 89); */
     background-color: rgb(108, 171, 221);
-    /* background-color: rgb(255, 198, 89); */
-    /* background-color: rgb(50.2%, 0%, 0%); */
+}
+
+.page-link {
+    margin-left: 10px;
+}
+
+.page-link:hover {
+    background-color: white;
+    color: rgb(108, 171, 221);
 }
