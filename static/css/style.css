@@ -25,6 +25,10 @@ h1, h2, h3 {
     color: white;
 }
 
+#logo:hover {
+    text-decoration: none;
+}
+
 .nav-link {
     color: white;
     font-family: 'Permanent Marker', sans-serif;
@@ -102,6 +106,7 @@ h1, h2, h3 {
     border-radius: 15px;
     color: white;
     background-color: rgb(108, 171, 221);
+    margin-bottom: 3px;
 }
 
 .cancel {
@@ -113,8 +118,8 @@ h1, h2, h3 {
 }
 
 .page-link:hover {
-    background-color: white;
-    color: rgb(108, 171, 221);
+    background-color: rgb(108, 171, 221);
+    color: black;
 }
 
 /* Media Queries */

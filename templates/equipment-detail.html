@@ -47,7 +47,15 @@
       </ul>
     </div>
     <div class="col-4">
-      <img id="detail-img" src="{{ equipment.equipment_image.url }}" alt="{{ equipment.equipment_image.url }}">
+      <!-- <img id="detail-img" src="{{ equipment.equipment_image.url }}" alt="{{ equipment.equipment_image.url }}"> -->
+
+      <!-- Source: Code Institute - I Think Therefore I Blog Videos -->
+      {% if "placeholder" in equipment.equipment_image.url %}
+      <img id="detail-img"  src="../static/images/placeholder-img.jpg" alt="placeholder image">
+      {% else %}
+      <img id="detail-img" src="{{ equipment.equipment_image.url }}" alt="{{ equipment.make_and_model }}">
+      {% endif %}
+      
     </div>
   </div>
 </div>

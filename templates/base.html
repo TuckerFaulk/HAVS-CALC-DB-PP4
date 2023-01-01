@@ -20,8 +20,12 @@
       <div class="container-fluid">
         <div class="row blue">
           <div class="col p-3 d-flex justify-content-start align-items-center">
-            <a class="text-gold" href="#" id="logo">HAVS <span class="maroon">| CALC |</span> DB</a> 
+            {% if user.is_authenticated %}
+            <a href="{% url 'calculator_list' %}" id="logo">HAVS | CALC | DB</a> 
             <!-- Add Href -->
+            {% else %}
+            <a href="{% url 'index' %}" id="logo">HAVS | CALC | DB</a> 
+            {% endif %}
           </div>
         
 

@@ -12,8 +12,8 @@
     <form method="POST" style="margin-top: 1.3em;">
       {{ form | crispy }}
       {% csrf_token %}
-      <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-      <a class="btn btn-primary" href="{% url 'calculator_list' %}" role="button">Cancel</a>
+      <button type="submit" class="btn">Submit</button>
+      <a class="btn cancel" href="{% url 'calculator_list' %}" role="button">Cancel</a>
   </form>
   </div>
 </div>
