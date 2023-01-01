@@ -104,6 +104,10 @@ h1, h2, h3 {
     background-color: rgb(108, 171, 221);
 }
 
+.cancel {
+    background-color: red;
+}
+
 .page-link {
     margin-left: 10px;
 }

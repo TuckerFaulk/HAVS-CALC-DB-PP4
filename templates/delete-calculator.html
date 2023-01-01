@@ -10,10 +10,10 @@
   </div>
   <div class="row m-4">
     <form method="POST" style="margin-top: 1.3em;">
-      <h3>Do you want to delete the following equipment from the calculator: {{ object.make_and_model }}?</h3>
+      <p>Do you want to delete the following equipment from the calculator: {{ object.make_and_model }}?</p>
       {% csrf_token %}
-      <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-      <a class="btn btn-primary" href="{% url 'calculator_list' %}" role="button">Cancel</a>
+      <button type="submit" class="btn">Submit</button>
+      <a class="btn cancel" href="{% url 'calculator_list' %}" role="button">Cancel</a>
   </form>
   </div>
 </div>
