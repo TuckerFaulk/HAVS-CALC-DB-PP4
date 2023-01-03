@@ -1,26 +1,60 @@
-// Modal Event Listener
+// Global Varibles
+let belowEAVWarning = "Exposure likely to be below 2.5m/s² A(8) EAV (100 Points).";
+let aboveEAVWarning = "WARNING: Exposure at or above 2.5m/s² A(8) EAV (100 Points).";
+let aboveELVWarning = "WARNING: Exposure above 5m/s² A(8) ELV (400 Points).";
+let belowEAVControls = 
+`<p>Where there is a risk to the health of an employee who is, or is liable to be, exposed to vibration, but their exposure is below the EAV, the employer must:</p>
 
-$('#exampleModal').on('shown.bs.modal', function () {
-    $('#myInput').trigger('focus')
-  })
+<ol type="a">
+  <li>Ensure that the employee is placed under suitable health surveillance.</li>
+  <li>Provide the employee with suitable and sufficient information, instruction and training.</li>
+</ol>`;
+let aboveEAVControls = 
+`<p>Where the daily personal HAV exposure is likely to equal or exceed the EAV the employer must:</p>
 
-$('#exampleModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
+<ol type="a">
+  <li>Reduce exposure to as low a level as is reasonably practicable by establishing and implementing 
+  a programme of organisational and technical measures which is appropriate to the activity.</li>
+  <li>Ensure that the employee is placed under suitable health surveillance.</li>
+  <li>Provide the employee with suitable and sufficient information, instruction and training.</li>
+</ol>`;
+let aboveELVControls = 
+`<p>Where the daily personal HAV exposure is likely to exceed the ELV the employer must take immediate action to:</p>
 
-// Alert Meassage TimeOut
+<ol type="a">
+  <li>Reduce exposure to vibration below the limit value.</li>
+  <li>Identify the reason for the limit being exceeded.</li>
+  <li>Modify the measures taken to prevent it being exceeded again.</li>
+</ol>`;
 
-setTimeout(function () {
-  $('#msg').alert('close')
-}, 2500);
 
-// Calculate Daily Exposure
+// Event listeners added on DomContentLoaded
+document.addEventListener("DOMContentLoaded", function() {
 
-$('#calc-daily-exposure').click(function () {
+  // Alert Meassage TimeOut
 
-  console.log("Calc Daily Exposure Clicked")
+  setTimeout(function () {
+    $('#msg').alert('close')
+  }, 2500);
 
-  // Calculate Daily Exposure
+  /**
+ * Calculates Daily Exposure and Total Exposure Points
+ * Updates Exposure Warning and Specific Controls to Consider
+ */
+
+  $('#calc-daily-exposure').click(function () {
+
+    let dailyExposure = calculateDailyExposure();
+    calculateTotalExposurePoints();
+    updateExposureWarnings(dailyExposure);
+  });
+});
+
+/**
+ * Pushes the partial exposure magnitude from the users calculator table into an array.
+ * Then calculates the daily exposure from this information.
+ */
+function calculateDailyExposure() {
 
   let partialExposure = [];
 
@@ -41,7 +75,15 @@ $('#calc-daily-exposure').click(function () {
 
   $('#daily-exposure').text(dailyExposure);
 
-  // Calculate Total Exposure Points
+  return dailyExposure;
+
+};
+
+/**
+ * Pushes the partial exposure points from the users calculator table into an array.
+ * Then calculates the total exposure points from this information.
+ */
+function calculateTotalExposurePoints() {
 
   let partialExposurePts = [];
 
@@ -57,45 +99,27 @@ $('#calc-daily-exposure').click(function () {
 
   $('#daily-exposure-pts').text(dailyExposurePts);
 
-  // Update Exposure Warning and Specific Controls to Consider
+};
 
-  let belowEAVWarning = "Exposure likely to be below 2.5m/s² A(8) EAV (100 Points).";
-  let aboveEAVWarning = "WARNING: Exposure at or above 2.5m/s² A(8) EAV (100 Points).";
-  let aboveELVWarning = "WARNING: Exposure above 5m/s² A(8) ELV (400 Points).";
-
-  let belowEAVControls = 
-  `Where there is a risk to the health of an employee who is, or is liable to be, exposed to vibration, but their exposure is below the EAV, the employer must:
-
-  (a) Ensure that the employee is placed under suitable health surveillance.
-  (b) Provide the employee with suitable and sufficient information, instruction and training.`;
-  let aboveEAVControls = 
-  `Where the daily personal HAV exposure is likely to equal or exceed the EAV the employer must:
-
-  (a) Reduce exposure to as low a level as is reasonably practicable by establishing and implementing a programme of organisational and technical measures which is appropriate to the activity.
-  (b) Ensure that the employee is placed under suitable health surveillance.
-  (c) Provide the employee with suitable and sufficient information, instruction and training.`;
-  let aboveELVControls = 
-  `Where the daily personal HAV exposure is likely to exceed the ELV the employer must take immediate action to:
-
-  (a) Reduce exposure to vibration below the limit value.
-  (b) Identify the reason for the limit being exceeded.
-  (c) Modify the measures taken to prevent it being exceeded again.`;
+/**
+ * Displays information in "Exposure Warning" and "EAV/ELV Specific Control Measures to Consider"
+ * on the users calculator, once the daily exposure is calculated
+ */
+function updateExposureWarnings(dailyExposure) {
 
   if (dailyExposure > 5) {
     $('#exposure-warning').text(aboveELVWarning);
     $('#exposure-warning').css("background-color", "red");
-    $('#specific-controls').text(aboveELVControls);
+    $('#specific-controls').html(aboveELVControls);
   } else if (dailyExposure > 2.5) {
     $('#exposure-warning').text(aboveEAVWarning);
     $('#exposure-warning').css("background-color", "yellow");
-    $('#specific-controls').text(aboveEAVControls);
+    $('#specific-controls').html(aboveEAVControls);
   } else if (dailyExposure < 2.5) {
     $('#exposure-warning').text(belowEAVWarning);
     $('#exposure-warning').css("background-color", "lime");
-    $('#specific-controls').text(belowEAVControls);
+    $('#specific-controls').html(belowEAVControls);
   }
 
-  // Dont forget to reset the info when equipment list changes
-  // Consider seperating the above into functions
-});
-
+};
+ 
