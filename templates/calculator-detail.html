@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container p-0">
   <div class="row m-4">
     <!-- Equipment Detail Column -->
     <div class="col-12 d-flex justify-content-end">
@@ -11,8 +11,8 @@
   </div>
 
 
-  <div class="row m-4 d-flex align-items-center">
-    <div class="col-8">
+  <div class="row d-flex align-items-center m-3">
+    <div class="col-lg-8 col-sm-12 p-0 m-3">
       <ul class="list-group list-group-horizontal">
         <li class="list-group-item blue">Category - Make and Model</li>
         <li class="list-group-item">{{ calculator.make_and_model.category }} - {{ calculator.make_and_model }}</li>
@@ -47,7 +47,7 @@
         <li class="list-group-item">{{ calculator.partial_exposure_pts }}</li>
       </ul>
     </div>
-    <div class="col-4">
+    <div class="col-lg-4 col-sm-12 m-3 p-0">
       <!-- <img id="detail-img" src="{{ calculator.make_and_model.equipment_image.url }}" alt="{{ equipment.equipment_image.url }}"> -->
 
       <!-- Source: Code Institute - I Think Therefore I Blog Videos -->
