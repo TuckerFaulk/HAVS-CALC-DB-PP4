@@ -12,7 +12,7 @@
   </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid p-0">
   <div class="row m-4">
     <div class="col-lg-12 col-sm-4">
       <table class="table">
@@ -25,9 +25,9 @@
             <th class="mobile">Time to reach ELV 5 m/s&#178; A(8)</th>
             <th class="mobile">Exposure Duration</th>
             <th></th>
-            <th class="invisible border-0"></th>
-            <th>Partial Exposure m/s² A(8)</th>
-            <th>Partial Exposure Points</th>
+            <th class="invisible border-0 mobile"></th>
+            <th class="mobile">Partial Exposure m/s² A(8)</th>
+            <th class="mobile">Partial Exposure Points</th>
           </tr>
         </thead>
         <tbody>
@@ -44,9 +44,9 @@
               <a href="{% url 'edit_calculator' equipment.slug %}"><i class="btn fa-solid fa-pen-to-square"></i></a>
               <a href="{% url 'delete_calculator' equipment.slug %}"><i class="btn fa-solid fa-trash"></i></a>
             </td>
-            <td class="border-0"></td>
-            <td class="partial-exposure text-center">{{ equipment.partial_exposure }}</td>
-            <td class="partial-exposure-pts text-center">{{ equipment.partial_exposure_pts }}</td>
+            <td class="border-0 mobile"></td>
+            <td class="partial-exposure text-center mobile">{{ equipment.partial_exposure }}</td>
+            <td class="partial-exposure-pts text-center mobile">{{ equipment.partial_exposure_pts }}</td>
           </tr>
           {% endfor %}
         </tbody>
@@ -60,12 +60,11 @@
   <!-- Project Controls and Daily Exposure -->
 
   <div class="row m-4 mb-5" id="flex">
-    <div class="col-lg-8 col-sm-12" id="a">
+    <div class="col-lg-4 col-sm-12" id="a">
       <table class="table">
         <thead class="blue">
           <tr>
-            <th class="col-6">General Controls to Consider</th>
-            <th class="col-6">EAV/ELV Specific Control Measures to Consider</th>
+            <th>General Controls to Consider</th>
           </tr>
         </thead>
         <tbody>
@@ -81,13 +80,27 @@
                   them and monitor progress.</li>
               </ul>
             </td>
-            <td class="text-left" id="specific-controls"></td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <div class="col-lg-2 col-sm-6" id="b">
+      <div class="col-lg-4 col-sm-12" id="b">
+        <table class="table">
+          <thead class="blue">
+            <tr>
+              <th>EAV/ELV Specific Control Measures to Consider</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-left" id="specific-controls"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    <div class="col-lg-2 col-sm-6" id="c">
       <table class="table">
         <thead class="blue">
           <tr>
@@ -102,7 +115,7 @@
       </table>
     </div>
 
-    <div class="col-lg-2 col-sm-6" id="c">
+    <div class="col-lg-2 col-sm-6" id="d">
       <table class="table">
         <thead class="blue">
           <tr>

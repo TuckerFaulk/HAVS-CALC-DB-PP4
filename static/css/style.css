@@ -132,15 +132,17 @@ h1, h2, h3 {
         display: none;
     }
 
+    /* Source: https://stackoverflow.com/questions/220273/how-can-i-reorder-my-divs-using-only-css */
     #flex { 
         display: flex;
       }
       #flex > #a { order: 3; }
-      #flex > #b { order: 1; }
+      #flex > #b { order: 4; }
+      #flex > #c { order: 1; }
       #flex > #c { order: 2; }
+    }
 
-      #detail-img {
+    #detail-img {
         height: 500px;
         width: 95%;
-    }
 }
