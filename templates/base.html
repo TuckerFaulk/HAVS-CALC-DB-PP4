@@ -17,47 +17,51 @@
 <body class="d-flex flex-column min-vh-100">
     
     <!-- Navigation -->
-    <nav>
-      <div class="container-fluid">
-        <div class="row blue">
-          <div class="col p-3 d-flex justify-content-start align-items-center">
-            {% if user.is_authenticated %}
-            <a href="{% url 'calculator_list' %}" id="logo">HAVS | CALC | DB</a> 
-            <!-- Add Href -->
-            {% else %}
-            <a href="{% url 'index' %}" id="logo">HAVS | CALC | DB</a> 
-            {% endif %}
-          </div>
-        
+    <!-- Hamburger Navbar Source: https://mdbootstrap.com/docs/b4/jquery/navigation/hamburger-menu/ -->
+  
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg blue">
+    
+    <!-- Logo -->
+    <div class="pl-3 d-flex justify-content-start align-items-center">
+      <a class="text-gold" href="#" id="logo">HAVS <span class="maroon">| CALC |</span> DB</a>
+      <!-- Add Href -->
+    </div>
+    
+    <!-- Collapse button -->
+    <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false"
+      aria-label="Toggle navigation"><span class="text-white"><i class="fas fa-bars fa-1x"></i></span></button>
+    
+    <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
 
-          <div class="col p-3 d-flex justify-content-end">
-              <ul class="nav">
-                  {% if user.is_authenticated %}
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'calculator_list' %}">Calculator</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'equipment_list' %}">Equipment</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a>
-                  </li>
-                  {% else %}
-                  <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'index' %}">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_login' %}">Sign In</a>
-                  </li>
-                  {% endif %}
-                </ul>
-          </div>
-        </div>
+        <!-- Links -->
+        <ul class="navbar-nav pl-3 ml-auto">
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'calculator_list' %}">Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'equipment_list' %}">Equipment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'account_login' %}">Sign In</a>
+          </li>
+          {% endif %}
+        </ul>
       </div>
-    </nav>
+  </nav>
 
 <!-- Alert Messages: Source Code Institute I Think Therefore I Blog Videos -->
 
