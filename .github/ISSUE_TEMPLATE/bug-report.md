@@ -1,5 +1,5 @@
 ---
-name: Bug Report
+name: BUG REPORT
 about: Create a report to help us improve
 title: 'BUG: <title>'
 labels: ''
@@ -21,8 +21,9 @@ Steps to reproduce the behavior:
 A clear and concise description of what you expected to happen.
 
 **Desktop (please complete the following information):**
- - OS: [e.g. windows, iOS]
- - Browser [e.g. chrome, safari]
+ - OS: [e.g. Windows, iOS]
+ - Browser [e.g. Chrome, Safari]
+ - Preview/Deployed: [e.g. GitHub Preview/Heroku Deployed]
 
 **Smartphone (please complete the following information):**
  - Device: [e.g. iPhone6]
