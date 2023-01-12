@@ -52,7 +52,7 @@ h1, h2, h3 {
 /* Jumbotron */
 
 .jumbotron {
-    background-image: url(../images/jackhammer.jpg);
+    background-image: url('https://res.cloudinary.com/dzqdaqlba/image/upload/v1673519798/static/images/jackhammer.18bccf681bc7.jpg');
     background-size: cover;
     height: 500px;
 }

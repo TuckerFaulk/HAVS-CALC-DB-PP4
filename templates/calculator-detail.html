@@ -2,8 +2,6 @@
 
 {% block content %}
 
-{% load static %}
-
 <div class="container p-0">
   <div class="row m-4">
     <!-- Equipment Detail Column -->
@@ -54,7 +52,7 @@
 
       <!-- Source: Code Institute - I Think Therefore I Blog Videos -->
       {% if "placeholder" in calculator.make_and_model.equipment_image.url %}
-      <img id="detail-img"  src="{% static 'images/placeholder-img.jpg' %}" alt="placeholder image">
+      <img id="detail-img"  src="https://res.cloudinary.com/dzqdaqlba/image/upload/v1673519796/static/images/placeholder-img.acf334564419.jpg" alt="placeholder image">
       {% else %}
       <img id="detail-img" src="{{ calculator.make_and_model.equipment_image.url }}" alt="{{ calculator.make_and_model }}">
       {% endif %}

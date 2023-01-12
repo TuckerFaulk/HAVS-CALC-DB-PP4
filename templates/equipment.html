@@ -2,8 +2,6 @@
 
 {% block content %}
 
-{% load static %}
-
 <div class="container">
   <div class="row m-4 justify-content-center">
     {% for equipment in equipment_list %}
@@ -11,7 +9,7 @@
 
       <!-- Source: Code Institute - I Think Therefore I Blog Videos -->
       {% if "placeholder" in equipment.equipment_image.url %}
-      <img class="card-img-top" src="{% static 'images/placeholder-img.jpg' %}" alt="placeholder image">
+      <img class="card-img-top" src="https://res.cloudinary.com/dzqdaqlba/image/upload/v1673519796/static/images/placeholder-img.acf334564419.jpg" alt="placeholder image">
       {% else %}
       <img src="{{ equipment.equipment_image.url }}" class="card-img-top" alt="{{ equipment.make_and_model }}">
       {% endif %}
