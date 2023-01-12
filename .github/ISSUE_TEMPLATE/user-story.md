@@ -7,4 +7,14 @@ assignees: ''
 
 ---
 
+USER STORY:
+
 As a **role** I can **capability** so that **received benefit**.
+
+ACCEPTANCE CRITERIA:
+
+- First
+
+TASKS:
+
+- [ ]  First
