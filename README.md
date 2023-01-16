@@ -129,7 +129,7 @@ To further improve data integrity, I decided to create class functions which cal
 - JQuery
 - Python
 - Django
-- SQL (PostgreSQL: ElephantSQL)
+- SQL (PostgreSQL)
 
 # Features
 

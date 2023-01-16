@@ -58,6 +58,7 @@ h1, h2, h3 {
 .jumbotron {
     background-image: url('https://res.cloudinary.com/dzqdaqlba/image/upload/v1673519798/static/images/jackhammer.18bccf681bc7.jpg');
     background-size: cover;
+    background-position: center;
     height: 500px;
 }
 
@@ -162,6 +163,18 @@ h1, h2, h3 {
     #detail-img {
         padding-left: 0px;
     }
+    
+    .jumbotron > h1 {
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .jumbotron > h1 {
+        font-size: 40px;
+    }
+
 }
 
 @media screen and (max-width: 640px) {
