@@ -4,17 +4,18 @@
 
 {% load crispy_forms_tags %}
 
-<div class="container">
+<div class="container d-flex justify-content-center">
   <div class="row m-4">
-    <h1>Delete Project</h1>
-  </div>
-  <div class="row m-4">
-    <form method="POST" style="margin-top: 1.3em;">
-      <p>Do you want to delete the following equipment from the calculator: {{ object.make_and_model }}?</p>
-      {% csrf_token %}
-      <button type="submit" class="btn">Submit</button>
-      <a class="btn cancel" href="{% url 'calculator_list' %}" role="button">Cancel</a>
-  </form>
+    <div class="col-12">
+      <h3>Delete Project</h3>
+
+      <form method="POST" style="margin-top: 1.3em;">
+        <p>Do you want to delete the following equipment from the calculator: {{ object.make_and_model }}?</p>
+        {% csrf_token %}
+        <button type="submit" class="btn">Submit</button>
+        <a class="btn cancel" href="{% url 'calculator_list' %}" role="button">Cancel</a>
+    </form>
+    </div>
   </div>
 </div>
 
