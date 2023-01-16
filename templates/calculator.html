@@ -7,7 +7,7 @@
   <div class="row m-4">
     <!-- Equipment Detail Column -->
     <div class="col-12 d-flex justify-content-end">
-      <a class="btn" href="{% url 'delete_all' %}" role="button"><i class="fa-solid fa-rotate-right"></i> Reset</a>
+      <a class="btn btn-db" href="{% url 'delete_all' %}" role="button"><i class="fa-solid fa-rotate-right"></i> Reset</a>
     </div>
   </div>
 </div>
@@ -41,8 +41,8 @@
             <td class="mobile">{{ equipment.exposure_duration_hours }} Hours {{ equipment.exposure_duration_minutes }} Minutes</td>
             <td>
               <a href="{% url 'calculator_detail' equipment.slug %}"><i class="btn fa-solid fa-circle-info"></i></a>
-              <a href="{% url 'edit_calculator' equipment.slug %}"><i class="btn fa-solid fa-pen-to-square"></i></a>
-              <a href="{% url 'delete_calculator' equipment.slug %}"><i class="btn fa-solid fa-trash"></i></a>
+              <a href="{% url 'edit_calculator' equipment.slug %}"><i class="btn edit fa-solid fa-pen-to-square"></i></a>
+              <a href="{% url 'delete_calculator' equipment.slug %}"><i class="btn cancel fa-solid fa-trash"></i></a>
             </td>
             <td class="border-0 mobile"></td>
             <td class="partial-exposure text-center mobile">{{ equipment.partial_exposure }}</td>
@@ -52,7 +52,7 @@
         </tbody>
       </table>
       <div class="col-12 d-flex justify-content-end">
-        <a class="btn" href="{% url 'add_calculator' %}" role="button"><i class="fa-solid fa-plus"></i> Add
+        <a class="btn btn-db" href="{% url 'add_calculator' %}" role="button"><i class="fa-solid fa-plus"></i> Add
           Equipment</a>
       </div>
     </div>
@@ -126,7 +126,7 @@
         <tbody>
           <tr>
             <td class="text-center" id="daily-exposure">
-              <button class="btn" id="calc-daily-exposure"><i class="fa-solid fa-calculator"></i> Calculate Daily
+              <button class="btn btn-db" id="calc-daily-exposure"><i class="fa-solid fa-calculator"></i> Calculate Daily
                 Exposure</button>
               <span class="invisible">0.0</span>
             </td>

@@ -107,6 +107,7 @@ After initially setting out all of the information required for the site, I used
 
 **Class Functions**
 
+To further improve data integrity, I decided to create class functions which calculated data values rather than storing this information in each model. As the user was able to update instances within the models which the outcome of the class function calculations were dependant on, keeping these seperate from the model meant that only one instance within the model required updating.
 
 # Languages Used
 
