@@ -135,18 +135,45 @@ To further improve data integrity, I decided to create class functions which cal
 
 ## Existing Features:
 
+### Home Page
+
+![Home Page](assets)
+
 ### Logo
 
-![Logo](assets)
+![Logo](static/readme_images/logo.jpg)
 
 ### Navigation
 
+![Navigation](static/readme_images/navbar_logged_out.jpg)
 
-<!-- More >>>>>>>>>>>>>> -->
+**Logged in User**
+
+![Navigation - User Logged In](static/readme_images/navbar_logged_in.jpg)
+
+**Mobile**
+
+![Navigation - Mobile](static/readme_images/navbar_mobile.jpg)
+
+### Footer
+
+![Footer](static/readme_images/footer.jpg)
+
+### Calculator
+
+![Calculator Page](assets)
+
+### Equipment
+
+![Equipment Page](assets)
+
+**View Equipment Details**
+
+![View Equipment Details Page](assets)
 
 ## Other Features:
 
-
+- User is informed when they have logged in
 
 ## Future Features
 
@@ -252,7 +279,8 @@ The live link for the site can be found here -  -->
 Resources Used:
 
 Images:
-Atlas Copco Cobra Mk1 -	https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.forconstructionpros.com%2Fconcrete%2Fequipment-products%2Fproduct%2F12104270%2Fatlas-copco-construction-equipment-atlas-copco-releases-new-versions-of-cobra-proe-and-cobra-tte-gas-breakers&psig=AOvVaw02K3AsISi9o6f2QEAakx5M&ust=1671874761415000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCJD91_24j_wCFQAAAAAdAAAAABAr
+[Atlas Copco Cobra Mk1](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.forconstructionpros.com%2Fconcrete%2Fequipment-products%2Fproduct%2F12104270%2Fatlas-copco-construction-equipment-atlas-copco-releases-new-versions-of-cobra-proe-and-cobra-tte-gas-breakers&psig=AOvVaw02K3AsISi9o6f2QEAakx5M&ust=1671874761415000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCJD91_24j_wCFQAAAAAdAAAAABAr)
+
 Waker BS50-2 -	https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.expresstools.co.uk%2Fwacker-neuson-bs50-2-trench-363924.html&psig=AOvVaw0nXF9Pj51CtTgWEkd_gcyc&ust=1671874852756000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCNiKm6m5j_wCFQAAAAAdAAAAABAE
 Bomag BVP18/45 -	https://www.acmetools.com/177-in-single-direction-vibratory-plate-honda-gx160-engine-bvp-18-45/402000002747.html
 Husqvarna LG164 -	https://www.nixonhire.co.uk/sales/p/plate-compactor-husqvarna-lg164
