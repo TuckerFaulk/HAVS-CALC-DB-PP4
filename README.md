@@ -55,9 +55,9 @@ The solution which I came up with was to store all of the required information i
 
 **Personas**
 
-Site User
+*Site User*
 
-Site Admin
+*Site Admin*
 
 **User Stories** 
 
@@ -65,29 +65,29 @@ Site Admin
 
 As there will only be two different types of user of this site (site user and site admin), I have broken down my user stories into these two categories. Not all of the user stories have been implmented but have been left to be included at a later date once the site grows.
 
-Site User:
+*As a Site User:*
 
-1. Account Registration: As a **Site User** I can **Register an Account** so that **I can access the system to assess a task with the calculator**.
-2. View Calculator: As a **Site User** I can **View the Calulator** so that **I can start to assess the vibration exposure of a new task**.
-3. Add Equipment to Calculator: As a **Site User** I can **Add Equipment to a new Project** so that **I can include the equipment being used during a task to then assess the vibration exposure**.
-4. Edit Equipment Details in Calculator: As a **Site User** I can **Edit Equipment Details in an Existing Project** so that **I can update equipment details where the duration of use has changed**.
-5. Delete Equipment in Calculator: As a **Site User** I can **Delete Equipment in an Existing Project** so that **I can remove equipment which my no longer be used in a task**.
-6. Reset Calculator: As a **Site User** I can **Reset Calculator** so that **I can assess a new task**.
-7. Calculate Exposure Details: As a **Site User** I can **Calculate Exposure Details** so that **I can assess the overall exposure to vibartion of a task**.
-8. View Equipment List: As a **Site User** I can **View the Equipment List** so that **I can ensure the equipment needed for their calculation us available**.
-9. View Equipment Details: As a **Site User** I can **View Equipment Details** so that **I can view the exposure limits of various items and decide which equipment is the safest to use**.
-10. Equipment Pagination: As a **Site User** I can **View a Paginated List of Equipment** so that **I can easily find equipment and view it's details**.
-11. Filter Equipment: As a **Site User** I can **Filter Equipment by Category** so that **it is easier to find the equipment I am looking for - e.g. browsing through the equipment list**.
-12. Add Project: As a **Site User** I can **Add a Project** so that **instead of reseting my calculator for a new task, I can create a new project and add to a new calculator (saving ones previously created to go back to)**.
+1. **Account Registration**: I can Register an Account so that I can access the system to assess a task with the calculator.
+2. **View Calculator**: I can View the Calulator so that I can start to assess the vibration exposure of a new task.
+3. **Add Equipment to Calculator**: I can Add Equipment to a new Project so that I can include the equipment being used during a task to then assess the vibration exposure.
+4. **Edit Equipment Details in Calculator**: I can Edit Equipment Details in an Existing Project so that I can update equipment details where the duration of use has changed.
+5. **Delete Equipment in Calculator**: I can Delete Equipment in an Existing Project so that I can remove equipment which my no longer be used in a task.
+6. **Reset Calculator**: I can Reset Calculator so that I can assess a new task.
+7. **Calculate Exposure Details**: I can Calculate Exposure Details so that I can assess the overall exposure to vibartion of a task.
+8. **View Equipment List**: I can View the Equipment List so that I can ensure the equipment needed for their calculation us available.
+9. **View Equipment Details**: I can View Equipment Details so that I can view the exposure limits of various items and decide which equipment is the safest to use.
+10. **Equipment Pagination**: I can View a Paginated List of Equipment so that I can easily find equipment and view it's details.
+11. **Filter Equipment**: I can Filter Equipment by Category so that it is easier to find the equipment I am looking for - e.g. browsing through the equipment list.
+12. **Add Project**: I can Add a Project so that instead of reseting my calculator for a new task, I can create a new project and add to a new calculator (saving ones previously created to go back to).
 
-Site Admin:
+*As a Site Admin:*
 
-1. Add equipment: As a **Site Admin** I can **Add Equipment** so that **It is available for a user to included it within a calculator**.
-2. Edit Equipment Details: As a **Site Admin** I can **Edit Equipment Details** so that **The most up to date information is available to the user**.
-3. Delete Equipment: As a **Site Admin** I can **Delete Equipment** so that **It is no longer available to be used in a calculator**.
-4. Add Categories: As a **Site Admin** I can **Add a Category** so that **It is available to be allocated to equipment**.
-5. Edit Categories: As a **Site Admin** I can **Edit a Category** so that **The correct category can be allocated to equipment**.
-6. Delete Categories: As a **Site Admin** I can **Delete a Category** so that **It is no longer available to be allocated to equipment**.
+1. **Add equipment**: I can Add Equipment so that It is available for a user to included it within a calculator.
+2. **Edit Equipment Details**: I can Edit Equipment Details so that The most up to date information is available to the user.
+3. **Delete Equipment**: I can Delete Equipment so that It is no longer available to be used in a calculator.
+4. **Add Categories**: I can Add a Category so that It is available to be allocated to equipment.
+5. **Edit Categories**: I can Edit a Category so that The correct category can be allocated to equipment.
+6. **Delete Categories**: I can Delete a Category so that It is no longer available to be allocated to equipment.
 
 **Wireframes**
 
