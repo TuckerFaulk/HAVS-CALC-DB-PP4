@@ -40,17 +40,34 @@ The live link for the site can be found here - https://havs-calc-db-project.hero
 
 This site was developed to address a problem which occured during my previous employment as a Senior Account Manager for a Health and Safety Consultancy. I did at the time develop this solution in Microsoft Excel at the time but thought that this assignment would be a great oppertunity to create a web version of the application.
 
+The issue was in relation to Hand Arm Vibrations (HAVS). HAVS is a condition caused by exposure of the hands and arms to vibration when using hand held tools. To prevent over exposure to vibration, the Health and Safety Executive created a HAVS Calculator so you could calculate whether an individual would be exposed to a cumilative magnitude above actions levels or limits based upon to tools which were being used during the day and how long they were being used for.
 
+When working for my pervious company, I observed that the companies managers were having difficulty completing this calculator as they found it onerous to get hold of the imformation which they needed to complete it. The company had over 100 peices of equipment in use within the business and all of the vibration magnitude measurements would be stored somewhere on the system where not everyone had access: there were 100s of managers from all parts of the business requiring this information. 
+
+The solution which I came up with was to store all of the required information in a central accessible database which was directly linked to the HAVS Calculator itself.
+
+- Made it quicker
+- Easy of use
+- Improved selection of equipment. Can choose a tool with a lower magnitude.
+- Reduced mistakes from transfering information.
+- Improve uptake. Given it was easy to do, more people would do it.
+- Management of company equipment. The database provided a central location so they were aware of the tools being used within the business. 
+
+**Personas**
+
+
+
+**User Goals**
+
+<!-- May have covered this above? -->
 
 **Wireframes**
 
 
 
-**Application Flowcharts**
+**User Stories** 
 
-![Flowchart](assets)
-
-**User Stories**
+<!-- Add story Points -->
 
 As there will only be two different types of user of this site (site user and site admin), I have broken down my user stories into these two categories. Not all of the user stories have been implmented but have been left to be included at a later date once the site grows.
 
@@ -78,8 +95,17 @@ Site Admin:
 5. Edit Categories: As a **Site Admin** I can **Edit a Category** so that **The correct category can be allocated to equipment**.
 6. Delete Categories: As a **Site Admin** I can **Delete a Category** so that **It is no longer available to be allocated to equipment**.
 
-**Data Models - Classes and Object Oriented Programming**
+**Application Flowcharts**
 
+![Flowchart](assets)
+
+**Data Models/Schema - Classes and Object Oriented Programming**
+
+After initially setting out all of the information required for the site, I used data normalisation to structure each relational model to help reduce data redundancy and improve data integrity.
+
+![Data Schema](static/readme_images/data_schema.jpg)
+
+**Class Functions**
 
 
 # Languages Used
@@ -90,6 +116,7 @@ Site Admin:
 - JQuery
 - Python
 - Django
+- SQL (PostgreSQL: ElephantSQL)
 
 # Features
 
@@ -99,13 +126,23 @@ Site Admin:
 
 ![Logo](assets)
 
+### Navigation
+
+
+<!-- More >>>>>>>>>>>>>> -->
+
 ## Other Features:
 
 
 
 ## Future Features
 
-- 
+- Projects
+- Filtering by selection
+- Equipment PPM Management
+- Noise Calculator
+- Accessories and Ground Conditions
+<!-- More of the above point? -->
 
 # Testing
 
@@ -163,6 +200,13 @@ The solution to fix this on the admin site is for the admin to slightly change t
 - Am I Responsive: Screenshots of the final project for the README file
 - Lucid Charts: Planning the site process with a flow diagram
 - Photoshop -->
+
+**Installed Packages**
+
+- 'django<4' gunicorn
+- dj3-cloudinary-storage
+
+<!-- Add -->
 
 # Deployment
 
