@@ -14,15 +14,15 @@
 
 <div class="container-fluid p-0">
   <div class="row m-4">
-    <div class="col-lg-12 col-sm-4">
+    <div class="col-md-12">
       <table class="table">
         <thead class="blue">
           <tr id="equipment-list">
             <th>Category - Make and Model</th>
             <th class="mobile">Vibration Magnitude</th>
-            <th class="mobile">Exposure Points per Hour</th>
-            <th class="mobile">Time to reach EAV 2.5 m/s&#178; A(8)</th>
-            <th class="mobile">Time to reach ELV 5 m/s&#178; A(8)</th>
+            <th class="tablet">Exposure Points per Hour</th>
+            <th class="tablet">Time to reach EAV 2.5 m/s&#178; A(8)</th>
+            <th class="tablet">Time to reach ELV 5 m/s&#178; A(8)</th>
             <th class="mobile">Exposure Duration</th>
             <th></th>
             <th class="invisible border-0 mobile"></th>
@@ -35,9 +35,9 @@
           <tr class="text-center">
             <td>{{ equipment.make_and_model.category }} - {{ equipment.make_and_model }}</td>
             <td class="mobile">{{ equipment.make_and_model.vibration_magnitude }}</td>
-            <td class="mobile">{{ equipment.make_and_model.exp_pts_per_hour }}</td>
-            <td class="mobile">{{ equipment.make_and_model.time_to_eav }}</td>
-            <td class="mobile">{{ equipment.make_and_model.time_to_elv }}</td>
+            <td class="tablet">{{ equipment.make_and_model.exp_pts_per_hour }}</td>
+            <td class="tablet">{{ equipment.make_and_model.time_to_eav }}</td>
+            <td class="tablet">{{ equipment.make_and_model.time_to_elv }}</td>
             <td class="mobile">{{ equipment.exposure_duration_hours }} Hours {{ equipment.exposure_duration_minutes }} Minutes</td>
             <td>
               <a href="{% url 'calculator_detail' equipment.slug %}"><i class="btn fa-solid fa-circle-info"></i></a>
@@ -60,7 +60,7 @@
   <!-- Project Controls and Daily Exposure -->
 
   <div class="row m-4 mb-5" id="flex">
-    <div class="col-lg-4 col-sm-12 pr-0 pl-0" id="a">
+    <div class="col-xl-4 col-lg-4 col-sm-12 pr-0 pl-0" id="a">
       <table class="table">
         <thead class="blue">
           <tr>
@@ -85,7 +85,7 @@
       </table>
     </div>
 
-      <div class="col-lg-4 col-sm-12 pr-0 pl-0" id="b">
+      <div class="col-xl-4 col-lg-3 col-sm-12 pr-0 pl-0" id="b">
         <table class="table">
           <thead class="blue">
             <tr>

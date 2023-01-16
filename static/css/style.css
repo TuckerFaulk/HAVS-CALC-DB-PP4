@@ -76,7 +76,7 @@ h1, h2, h3 {
     text-align: center;
     vertical-align: middle;
     color: white;
-    /* color: #002C5A; */
+    height: 74px;
 }
 
 /* Equipment List */
@@ -141,21 +141,33 @@ h1, h2, h3 {
 
 @media screen and (max-width: 992px) {
 
-    .mobile {
-        display: none;
-    }
-
     /* Source: https://stackoverflow.com/questions/220273/how-can-i-reorder-my-divs-using-only-css */
     #flex { 
         display: flex;
-      }
-      #flex > #a { order: 3; }
-      #flex > #b { order: 4; }
-      #flex > #c { order: 1; }
-      #flex > #c { order: 2; }
+        }
+        #flex > #a { order: 3; }
+        #flex > #b { order: 4; }
+        #flex > #c { order: 1; }
+        #flex > #c { order: 2; }
+
+}
+
+@media screen and (max-width: 992px) {
+
+    .tablet {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .mobile {
+        display: none;
     }
 
     #detail-img {
         height: 500px;
         width: 100%;
+    }
+
 }
