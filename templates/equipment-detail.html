@@ -11,8 +11,8 @@
   </div>
 
 
-  <div class="row m-4 d-flex align-items-center m-3">
-    <div class="col-lg-7 col-sm-12 p-0 m-3">
+  <div class="row m-3">
+    <div class="col-lg-7 col-12 p-0 m-3">
       <ul class="list-group list-group-horizontal">
         <li class="list-group-item blue">Category - Make and Model</li>
         <li class="list-group-item">{{ equipment.category }} - {{ equipment.make_and_model }}</li>
@@ -46,7 +46,8 @@
         <li class="list-group-item">{{ equipment.author }}</li>
       </ul>
     </div>
-    <div class="col-lg-4 col-sm-12 mt-3 p-0">
+
+    <div class="col-lg-4 col-12 mt-3 p-0 d-flex justify-content-center">
 
       <!-- Source: Code Institute - I Think Therefore I Blog Videos -->
       {% if "placeholder" in equipment.equipment_image.url %}

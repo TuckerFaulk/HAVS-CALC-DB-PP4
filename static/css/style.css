@@ -90,6 +90,7 @@ h1, h2, h3 {
 #detail-img {
     height: 500px;
     width: 400px;
+    padding-left: 50px;
 }
 
 /* Footer */
@@ -157,6 +158,10 @@ h1, h2, h3 {
     .tablet {
         display: none;
     }
+
+    #detail-img {
+        padding-left: 0px;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -164,6 +169,10 @@ h1, h2, h3 {
     .mobile {
         display: none;
     }
+
+}
+
+@media screen and (max-width: 576px) {
 
     #detail-img {
         height: 500px;
