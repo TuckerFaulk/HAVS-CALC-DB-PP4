@@ -188,14 +188,21 @@ To further improve data integrity, I decided to create class functions which cal
 
 # Testing
 
-## Test of User Stories:
+## Manual Test of User Stories:
+
+***As a Site User:***
+
+| Test   |      Expected     |  Passed |
+|-------|:------------------|:--------:|
+|I can Register an Account so that I can access the system to assess a task with the calculator.|- User is able to login<br/>- User is able to logout<br/>- User is able to register for an account|☑|
+|I can View the Calulator so that I can start to assess the vibration exposure of a new task.|- The user is able to view their own calculator<br/> - The calculator should be blank if they have not added any equipment previously<br/>- The calculator should display any previously added equipment|☑|
+|I can Add Equipment to a new Project so that I can include the equipment being used during a task to then assess the vibration exposure.|- Button should be available for the user to add equipment to their own calculator<br/>- Form is displayed requesting the user to add their information<br/>- The form includes validation to ensure it has been completed and no invalid values have been input<br/>- Submit button is available for the user to confirm their addition<br/>- Details of the equipment added should be included into the users calculator|☑|
+|I can Edit Equipment Details in an Existing Project so that I can update equipment details where the duration of use has changed.|- Button is available for the user to click when they want to edit a calculator equipment instance<br/>- The correct details of the selected instance are displayed<br/>- These details can be edited by the user<br/>- A submit button is available for the user to confirm any changes made<br/>- The edited instance in the user's calculator has been updated|☑|
+
+***As a Site Admin:***
 
 | Test   |      Expected     |  Passed |
 |--------|:------------------|:--------:|
-|As a Site User I can Register an Account so that I can access the system to assess a task with the calculator.|- User is able to login
-- User is able to logout
-- User is able to register for an account|☑|
-
 
 ## Test on Alternative Browsers
 
