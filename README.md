@@ -107,9 +107,9 @@ Site Admin:
 
 ![Index Page Wireframe](static/readme_images/equipment-wireframe.jpg)
 
-**Application Flowcharts**
+**Site Navigation Flowchart**
 
-![Flowchart](assets)
+![Flowchart](static/readme_images/flowchart.jpg)
 
 **Data Models/Schema - Classes and Object Oriented Programming**
 
