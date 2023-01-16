@@ -36,7 +36,7 @@ The live link for the site can be found here - https://havs-calc-db-project.hero
 
 # Design and Planning
 
-**Site Purpose**
+**Site Purpose and User Goals**
 
 This site was developed to address a problem which occured during my previous employment as a Senior Account Manager for a Health and Safety Consultancy. I did at the time develop this solution in Microsoft Excel at the time but thought that this assignment would be a great oppertunity to create a web version of the application.
 
@@ -55,15 +55,9 @@ The solution which I came up with was to store all of the required information i
 
 **Personas**
 
+Site User
 
-
-**User Goals**
-
-<!-- May have covered this above? -->
-
-**Wireframes**
-
-
+Site Admin
 
 **User Stories** 
 
@@ -95,6 +89,24 @@ Site Admin:
 5. Edit Categories: As a **Site Admin** I can **Edit a Category** so that **The correct category can be allocated to equipment**.
 6. Delete Categories: As a **Site Admin** I can **Delete a Category** so that **It is no longer available to be allocated to equipment**.
 
+**Wireframes**
+
+*Index Page*
+
+![Index Page Wireframe](static/readme_images/index_wireframe.jpg)
+
+*Logged in User Navbar*
+
+![Index Page Wireframe](static/readme_images/logged_in_user_nav.jpg)
+
+*Calculator Pages*
+
+![Index Page Wireframe](static/readme_images/calculator-wireframe.jpg)
+
+*Equipment Pages*
+
+![Index Page Wireframe](static/readme_images/equipment-wireframe.jpg)
+
 **Application Flowcharts**
 
 ![Flowchart](assets)
@@ -105,7 +117,7 @@ After initially setting out all of the information required for the site, I used
 
 ![Data Schema](static/readme_images/data_schema.jpg)
 
-**Class Functions**
+*Class Functions*
 
 To further improve data integrity, I decided to create class functions which calculated data values rather than storing this information in each model. As the user was able to update instances within the models which the outcome of the class function calculations were dependant on, keeping these seperate from the model meant that only one instance within the model required updating.
 
