@@ -167,6 +167,10 @@ To further improve data integrity, I decided to create class functions which cal
 
 ![Footer](static/readme_images/footer.jpg)
 
+### Favicon
+
+![Favicon](static/readme_images/android-chrome-192x192.png)
+
 ### Calculator
 
 ![Calculator Page](assets)
