@@ -231,7 +231,65 @@ To further improve data integrity, I decided to create class functions which cal
 
 ## Debugging
 
-<!-- Add in the bugs recorded in Projects -->
+1. Placeholder Image on Equipment/Calculator Detail Pages
+
+The placeholder images on the equipment and calculator detail pages were not displaying.
+
+It is noted that the correct "alt" text was being displayed in the images place so it was thought that the if statement in the code is working.
+
+It is also noted that the cloudinary images were being displayed.
+
+*To Reproduce*
+Steps to reproduce the behavior:
+
+a. Go to 'https://havs-calc-db-pp4.herokuapp.com/equipment/'
+b. Click on 'View Details' of an equipment with a placeholder image in list view
+c. See error: Alt text displaying instead of the placeholder image
+
+*Expected behavior*
+A placeholder image was to be displayed in the equipment and calculator detail pages where a user has not uploaded an image.
+
+*Solution*
+A source link to the folder location was being used instead of reference to the static file location, e.g. {% static 'location/of/file' %}
+
+2. Text formatting of EAV/ELV Specific Control Measures
+
+There was an issue with the text formatting of the reponses under "EAV/ELV Specific Control Measures".
+
+*To Reproduce*
+Steps to reproduce the behavior:
+
+a. Go to 'https://8000-tuckerfaulk-havscalcdbp-zn557uvrtgy.ws-eu82.gitpod.io/calculator/'
+b. Click on 'Calculate Daily Exposure'
+c. See error: text incorrectly formatted under "EAV/ELV Specific Control Measures"
+
+*Expected behavior*
+Bullet points were expected to be set on a new line. All of the text was bunching into a single paragraph.
+
+*Solution*
+In the JavaScript function set to add the appropriate response once the 'Calculate Daily Exposure' button is selected, the code was written to only replace the "text" in the html tag. This was changed so the "html" is to be replaced and the response variables were updated to include html formatting.
+
+3. Calculator Slug
+
+If a user tried to add equipment to their calculator which is the same make and model and exposure duration of an instance already existing in the calculator, an error was displayed as a unique slug could not be created.
+
+*To Reproduce*
+Steps to reproduce the behavior:
+
+a. Go to 'https://8000-tuckerfaulk-havscalcdbp-zn557uvrtgy.ws-eu82.gitpod.io/calculator/'
+b. Click on 'Add Equipment'
+c. Add equipment noting the "make and model" and "exposure duration" detailed
+d. Submit form
+e. Click on 'Add Equipment' again
+f. Add equipment again but insert the same "make and model" and "exposure duration" previously detailed
+g. Submit form
+h. See error
+
+*Expected behavior*
+Once a form is submitted, the new equipment should be displayed in the calculator even if this is a duplication of what has already been added.
+
+*Solution*
+The error was being displayed as a unique slug could not be generated. The slug was being created based on the user, make and model, and exposure duration. As these were all the same when a duplication was submitted, the error was created. Code was added to the slug generator to add five random letters to the end. This ensures that each slug is unique.
 
 ## Validator Testing
 
