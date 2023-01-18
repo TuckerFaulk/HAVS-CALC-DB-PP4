@@ -165,6 +165,8 @@ To further improve data integrity, I decided to create class functions which cal
 
 ![Calculator Page](assets)
 
+- Calculator Button
+
 ### Equipment
 
 ![Equipment Page](assets)
@@ -175,6 +177,7 @@ To further improve data integrity, I decided to create class functions which cal
 
 ## Other Features:
 
+- Logging In with AllAuth
 - User is informed when they have logged in
 
 ## Future Features
@@ -204,18 +207,18 @@ To further improve data integrity, I decided to create class functions which cal
 | Test   |      Expected     |  Passed |
 |--------|:------------------|:--------:|
 
-## Test on Alternative Browsers
+## Test on Alternative Browsers and Screen Size
 
-<!-- |   Test   |   Layout (Pass)   |   Functionality (Pass)   |
-|----------|:-----------------:|:-------------------------:|
-|Chrome    |      ☑           |            ☑             |
-|Safari    |      ☑           |            ☑             |
-|Firefox   |      ☑           |            ☑             |
-|Edge      |      ☑           |            ☑             | -->
+|   Test   |   Small (≥576px) |  Medium (≥768px)   |   Large (≥992px)   |   Functionality (Pass)   |
+|----------|:----------------:|:------------------:|:------------------:|:------------------------:|
+|Chrome    |      ☑           |         ☑         |         ☑         |            ☑             |
+|Safari    |      ☑           |         ☑         |         ☑         |            ☑             |
+|Firefox   |      ☑           |         ☑         |         ☑         |            ☑             |
+|Edge      |      ☑           |         ☑         |         ☑         |            ☑             |
 
 ## Debugging
 
-
+<!-- Unsure what is in this section? -->
 
 ## Validator Testing
 
@@ -245,52 +248,77 @@ The solution to fix this on the admin site is for the admin to slightly change t
 
 ## Libraries and Programs Used
 
-<!-- - Github: Store Repository
-- Gitpod: Create the python files
+- Github: Store Repository
+- Gitpod: 
+- Heroku: Site Deployment
 - Google Chrome, Microsoft Edge, Mozilla Firefox, Safari: Site testing on alternative browsers
 - Microsoft OneNote: Planning notes for the project
+- Microsoft Whiteboard: Developing wireframes
 - Am I Responsive: Screenshots of the final project for the README file
 - Lucid Charts: Planning the site process with a flow diagram
-- Photoshop -->
+- Adobe Photoshop: Photo editing
+- Bootstrap: CSS Styling
+<!-- - Google Fonts: for the font families
+- Font Awesome: to add icons to the social links in the footer element -->
 
 **Installed Packages**
 
-- 'django<4' gunicorn
-- dj3-cloudinary-storage
-
-<!-- Add -->
+- Cloudinary (1.30.0)
+- Dj-database-url (0.5.0)
+- Django (3.2.16)
+- Django-allauth (0.51.0)
+- Django-crispy-forms (1.14.0)
+- Gunicorn (20.1.0)
+- Psycopg2 (2.9.5)
 
 # Deployment
 
-<!-- This project was deployed on Heroku using Code Institute's Python Essentials template. The steps taken to create the Heroku App were:
+This project was deployed on Heroku using Code Institute's I Think Therefore I Blog Videos. The steps taken to create the Heroku App were:
 
-**Preparing for deployment on GitHub:**
+**Installing Libraries:**
 
-1. Add a new line character ("\n") after each input request
-2. Type into the terminal 'pip3 freeze > requirements.txt' to update this file with a list of dependencies which Heroku needs to download for the application to work
+**Creating the Heroku App:**
 
-**Deploying on Heroku:**
+**Creating the PostgreSQL database (ElephantSQL):**
 
-1. Create App
-2. Add creds.json file information to the Apps Config Vars
-3. Add the 'Python' and the 'Nodejs' buildpacks
-4. Select the GitHub Deployment Method, and confirm the connection to GitHub
-5. Search and connect to the Hangman Game GitHub Repository
-6. Enable 'Automatic Deploys'
-7. Then manually deploy by selecting the 'Deploy Branch' button
-8. The app will then be successfully deployed: press the 'view' button to open the deployed site 
+**Hiding Sensivite Information:**
 
-The live link for the site can be found here -  -->
+**Update Settings:**
+
+**Connecting Heroku to the Database:**
+
+**Connecting Cloudinary:**
+
+**Allowing Heroku as Host:**
 
 # Credits
 
-
+I have again enjoyed learning with the Code Institute and completing my four assignment. I would like to thank my mentor Martina for her support, the CI Student Support Team and the CI Slack Community. Finally a big thank you to my girlfriend and little sister for their help with testing and the review of this site.
 
 ## Content
 
 Resources Used:
 
-Images used for Equipment in the Equipment List:
+- Code Institutes 'I Think Therefore I Blog Videos'
+- @Ed B_alum CI Project-Portfolio-4 Slack Channel - Filtering each Calculator to only Display the Logged in Users Equipment
+- [Support with Data Normalisation](https://www.youtube.com/watch?v=GFQaEYEc8_8)
+- [Creating the Vibration Calculations](https://www.hse.gov.uk/pubns/priced/l140.pdf)
+- [Index Page Information](https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-hand-arm-vibration-syndrome-havs)
+- [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/)
+- [Creating a Random String in Slug](https://stackoverflow.com/questions/42429463/django-generating-random-unique-slug-field-for-each-model-object)
+- [Setting the logged in user to created_by for Django Views](https://stackoverflow.com/questions/72033344/set-the-logged-in-user-to-created-by-for-django-createview)
+- [Very Academy YouTube Channel - Django Class-Based Views Playlist](https://www.youtube.com/watch?v=GxA2I-n8NR8&list=PLOLrQ9Pn6caxNb9eFZJ6LfY29nZkKmmXT)
+- [Creating Slugs in Models](https://github.com/veryacademy/YT-Django-CBV-Mini-Series/blob/master/CreateView/books/models.py)
+- [Calculator Reset Button - Deleteing all instances from a Django Model](https://www.codegrepper.com/tpc/how+to+delete+all+instances+of+model+in+django)
+- [Hamburger Navbar](https://mdbootstrap.com/docs/b4/jquery/navigation/hamburger-menu/)
+
+**Images**
+
+*Jumbotron Image*
+
+- [Jackhammer](https://www.istockphoto.com/photo/working-on-a-road-construction-gm164526286-23495173)
+
+*For Equipment in the Equipment List:*
 
 - [Atlas Copco Cobra Mk1](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.forconstructionpros.com%2Fconcrete%2Fequipment-products%2Fproduct%2F12104270%2Fatlas-copco-construction-equipment-atlas-copco-releases-new-versions-of-cobra-proe-and-cobra-tte-gas-breakers&psig=AOvVaw02K3AsISi9o6f2QEAakx5M&ust=1671874761415000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCJD91_24j_wCFQAAAAAdAAAAABAr)
 - [Waker BS50-2](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.expresstools.co.uk%2Fwacker-neuson-bs50-2-trench-363924.html&psig=AOvVaw0nXF9Pj51CtTgWEkd_gcyc&ust=1671874852756000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCNiKm6m5j_wCFQAAAAAdAAAAABAE)
