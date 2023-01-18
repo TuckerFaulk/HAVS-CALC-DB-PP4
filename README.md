@@ -46,6 +46,8 @@ When working for my pervious company, I observed that the companies managers wer
 
 The solution which I came up with was to store all of the required information in a central accessible database which was directly linked to the HAVS Calculator itself.
 
+<!-- TBC -->
+
 - Made it quicker
 - Easy of use
 - Improved selection of equipment. Can choose a tool with a lower magnitude.
@@ -54,6 +56,8 @@ The solution which I came up with was to store all of the required information i
 - Management of company equipment. The database provided a central location so they were aware of the tools being used within the business. 
 
 **Personas**
+
+<!-- TBC -->
 
 *Site User*
 
@@ -137,6 +141,8 @@ To further improve data integrity, I decided to create class functions which cal
 
 ### Home Page
 
+<!-- TBC Once the final design of the site has been confirmed -->
+
 ![Home Page](assets)
 
 ### Logo
@@ -177,17 +183,20 @@ To further improve data integrity, I decided to create class functions which cal
 
 ## Other Features:
 
+<!-- TBC -->
+
 - Logging In with AllAuth
 - User is informed when they have logged in
 
 ## Future Features
 
-- Projects
-- Filtering by selection
-- Equipment PPM Management
-- Noise Calculator
-- Accessories and Ground Conditions
-<!-- More of the above point? -->
+<!-- TBC -->
+
+- **Add Projects:** As a Site User I can Add a Project so that instead of reseting my calculator for a new task, I can create a new project and add to a new calculator (saving ones previously created to go back to).
+- **Filtering by Category:** As a Site User I can Filter Equipment by Category so that it is easier to find the equipment I am looking for - e.g. browsing through the equipment list.
+- **Equipment Planned Preventative Maintenance (PPM) Management:**
+- **Noise Calculator:**
+- **Add and Filter by Accessories and Ground Conditions:**
 
 # Testing
 
@@ -293,6 +302,8 @@ The error was being displayed as a unique slug could not be generated. The slug 
 
 ## Validator Testing
 
+<!-- TBC Once the site has been finalised-->
+
 <!-- - PEP8Online: No errors raised in both of the run.py and hangman.py files.
 
 *PEP8 Online Checker: run.py file*
@@ -309,7 +320,6 @@ The error was being displayed as a unique slug could not be generated. The slug 
 
 ## Unfixed Bugs
 
-<!-- There were no unfixed bugs identified during the testing of this site. -->
 When adding equipment to the calculator model in the admin site, if the data inserted is exactly the same as what already exists, a validation error will pop-up stating "Calculator with this Slug already exists". 
 
 1. This has been fixed when adding equipment to the calculator model from the live site (most likely the only place this would be added).
@@ -320,8 +330,10 @@ The solution to fix this on the admin site is for the admin to slightly change t
 ## Libraries and Programs Used
 
 - Github: Store Repository
-- Gitpod: 
+- Gitpod: IDE
 - Heroku: Site Deployment
+- Cloudinary: Serving static media files
+- ElephantSQL: PostgreSQL database hosting
 - Google Chrome, Microsoft Edge, Mozilla Firefox, Safari: Site testing on alternative browsers
 - Microsoft OneNote: Planning notes for the project
 - Microsoft Whiteboard: Developing wireframes
@@ -329,8 +341,8 @@ The solution to fix this on the admin site is for the admin to slightly change t
 - Lucid Charts: Planning the site process with a flow diagram
 - Adobe Photoshop: Photo editing
 - Bootstrap: CSS Styling
-<!-- - Google Fonts: for the font families
-- Font Awesome: to add icons to the social links in the footer element -->
+- Google Fonts: for the font families
+- Font Awesome: to add icons to the site
 
 **Installed Packages**
 
@@ -343,6 +355,8 @@ The solution to fix this on the admin site is for the admin to slightly change t
 - Psycopg2 (2.9.5)
 
 # Deployment
+
+<!-- TBC -->
 
 This project was deployed on Heroku using Code Institute's I Think Therefore I Blog Videos. The steps taken to create the Heroku App were:
 
