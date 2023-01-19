@@ -64,33 +64,32 @@ A typical Site Admin may be a Health and Safety Manager or a Director within a m
 
 **User Stories** 
 
-<!-- Add story Points -->
-
-As there will only be two different types of user of this site (site user and site admin), I have broken down my user stories into these two categories. Not all of the user stories have been implmented but have been left to be included at a later date once the site grows.
+As seen above, there will only be two different types of user of this site (Site User and Site Admin). I have broken down my user stories into these two categories. Not all of the user stories have been implmented but have been left to be included at a later date once the site grows.
 
 *As a Site User:*
 
-1. **Account Registration**: I can Register an Account so that I can access the system to assess a task with the calculator. (Story Points)
-2. **View Calculator**: I can View the Calulator so that I can start to assess the vibration exposure of a new task. (Story Points)
-3. **Add Equipment to Calculator**: I can Add Equipment to a new Project so that I can include the equipment being used during a task to then assess the vibration exposure. (Story Points)
-4. **Edit Equipment Details in Calculator**: I can Edit Equipment Details in an Existing Project so that I can update equipment details where the duration of use has changed. (Story Points)
-5. **Delete Equipment in Calculator**: I can Delete Equipment in an Existing Project so that I can remove equipment which my no longer be used in a task. (Story Points)
-6. **Reset Calculator**: I can Reset Calculator so that I can assess a new task. (Story Points)
-7. **Calculate Exposure Details**: I can Calculate Exposure Details so that I can assess the overall exposure to vibartion of a task. (Story Points)
-8. **View Equipment List**: I can View the Equipment List so that I can ensure the equipment needed for their calculation us available. (Story Points)
-9. **View Equipment Details**: I can View Equipment Details so that I can view the exposure limits of various items and decide which equipment is the safest to use. (Story Points)
-10. **Equipment Pagination**: I can View a Paginated List of Equipment so that I can easily find equipment and view it's details. (Story Points)
-11. **Filter Equipment**: I can Filter Equipment by Category so that it is easier to find the equipment I am looking for - e.g. browsing through the equipment list. (Story Points)
-12. **Add Project**: I can Add a Project so that instead of reseting my calculator for a new task, I can create a new project and add to a new calculator (saving ones previously created to go back to). (Story Points)
+1. **Account Registration**: I can Register an Account so that I can access the system to assess a task with the calculator. (4 Story Points)
+2. **View Calculator**: I can View the Calulator so that I can start to assess the vibration exposure of a new task. (4 Story Points)
+3. **Add Equipment to Calculator**: I can Add Equipment to a new Project so that I can include the equipment being used during a task to then assess the vibration exposure. (2 Story Points)
+4. **View Calculator Equipment Details**: I can View Calculator Equipment Details so that I can view the partial exposure limits of the item. (3 Story Points)
+5. **Edit Equipment Details in Calculator**: I can Edit Equipment Details in an Existing Project so that I can update equipment details where the duration of use has changed. (2 Story Points)
+6. **Delete Equipment in Calculator**: I can Delete Equipment in an Existing Project so that I can remove equipment which my no longer be used in a task. (2 Story Points)
+7. **Reset Calculator**: I can Reset Calculator so that I can assess a new task. (1 Story Points)
+8. **Calculate Exposure Details**: I can Calculate Exposure Details so that I can assess the overall exposure to vibartion of a task. (3 Story Points)
+9. **View Equipment List**: I can View the Equipment List so that I can ensure the equipment needed for their calculation us available. (4 Story Points)
+10. **View Equipment Details**: I can View Equipment Details so that I can view the exposure limits of various items and decide which equipment is the safest to use. (3 Story Points)
+11. **Equipment Pagination**: I can View a Paginated List of Equipment so that I can easily find equipment and view it's details. (1 Story Points)
+12. **Filter Equipment (Won't Have)**: I can Filter Equipment by Category so that it is easier to find the equipment I am looking for - e.g. browsing through the equipment list. (4 Story Points)
+13. **Add Project (Won't Have)**: I can Add a Project so that instead of reseting my calculator for a new task, I can create a new project and add to a new calculator (saving ones previously created to go back to). (4 Story Points)
 
 *As a Site Admin:*
 
-1. **Add equipment**: I can Add Equipment so that It is available for a user to included it within a calculator. (Story Points)
-2. **Edit Equipment Details**: I can Edit Equipment Details so that The most up to date information is available to the user. (Story Points)
-3. **Delete Equipment**: I can Delete Equipment so that It is no longer available to be used in a calculator. (Story Points)
-4. **Add Categories**: I can Add a Category so that It is available to be allocated to equipment. (Story Points)
-5. **Edit Categories**: I can Edit a Category so that The correct category can be allocated to equipment. (Story Points)
-6. **Delete Categories**: I can Delete a Category so that It is no longer available to be allocated to equipment. (Story Points)
+1. **Add equipment**: I can Add Equipment so that It is available for a user to included it within a calculator. (3 Story Points)
+2. **Edit Equipment Details**: I can Edit Equipment Details so that The most up to date information is available to the user. (1 Story Points)
+3. **Delete Equipment**: I can Delete Equipment so that It is no longer available to be used in a calculator. (1 Story Points)
+4. **Add Categories**: I can Add a Category so that It is available to be allocated to equipment. (3 Story Points)
+5. **Edit Categories**: I can Edit a Category so that The correct category can be allocated to equipment. (1 Story Points)
+6. **Delete Categories**: I can Delete a Category so that It is no longer available to be allocated to equipment. (1 Story Points)
 
 **Wireframes**
 
