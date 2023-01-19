@@ -347,6 +347,7 @@ The solution to fix this on the admin site is for the admin to slightly change t
 - Bootstrap: CSS Styling
 - Google Fonts: for the font families
 - Font Awesome: to add icons to the site
+- Real Favicon Generator: Creating Favicon
 
 **Installed Packages**
 
@@ -362,23 +363,81 @@ The solution to fix this on the admin site is for the admin to slightly change t
 
 <!-- TBC -->
 
-This project was deployed on Heroku using Code Institute's I Think Therefore I Blog Videos. The steps taken to create the Heroku App were:
+This project was deployed on Heroku using Code Institute's I Think Therefore I Blog Videos. After creating a GitHub respository, the steps taken to create the Heroku App were:
 
-**Installing Libraries:**
+**Installing Django and Supporting Libraries:**
+
+- Install Django and gunicorn: pip3 install 'django<4' gunicorn
+- Install Django database and pyscopg2: pip3 install dj_database_url psycopg2
+- Install Cloudinary: pip3 install dj3-cloudinary-storage
+- Create the requirements.txt file: pip3 freeze --local > requirements.txt
+
+**Creating the Django Project and App**
+
+- Create the Django project: django-admin startproject havscalcdb .
+- Create the calculator app: python3 manage.py startapp calculator
+- Add the calculator app to "INSTALLED_APPS" in the settings.py file
+- Migrate changes: python3 manage.py migrate
 
 **Creating the Heroku App:**
 
+- Log into Heroku and go to the Dashboard
+- Click "New" and select "Create new app" from the drop-down menu
+- Add a unique app name (havs-calc-db-pp4) and choose the relevant region (europe)
+- Click "Create app"
+- Add the Heroku Postgres database to the Resources tab
+
 **Creating the PostgreSQL database (ElephantSQL):**
 
-**Hiding Sensivite Information:**
+- Log into ElephantSQL
+- Click "Create New Instance"
+- Set up a plan by giving it a name and select the "Tiny Turtle" plan.
+- Click "Select Region" and choose the appropriate data center (nearest by location)
+- Click "Review"
+- Check all details and click "Create Instance"
+- Return to dashboard and click on the name of the newly created database instance
+- Copy the database URL from the details section
 
-**Update Settings:**
+**Create env.py file:**
 
-**Connecting Heroku to the Database:**
+- Create env.py file ensuring it is included in the .gitignore file
+- Add "import os" to env.py file
+- Set environment variable DATABASE_URL to the URL copied from ElephantSQL: os.environ["DATABASE_URL"]="<copiedURL>"
+- Set SECRET_KEY variable: os.environ["SECRET_KEY"]="mysecretkey"
+
+**Modifying Settings:**
+
+- Connect the Django project to env.py by adding the following to the top of the settings.py file:
+
+  import os
+  import dj_database_url
+  if os.path.isfile('env.py'):
+      import env
+
+- Replace the insecure secret key provided by Django in settings.py with: SECRET_KEY = os.environ.get('SECRET_KEY')
+<!-- - Connect to the new database by replacing the provided DATABASE variable with: -->
+
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
+
+- Save the settings.py file
+- Migrate changes: python3 manage.py migrate
+
+**Add Heroku Config Vars:**
+
+<!-- - In Heroku dashboard, go to Settings tab
+- Add three new config vars DATABASE_URL (value is database URL), SECRET_KEY (value is secret key string) and PORT (value "8000") -->
 
 **Connecting Cloudinary:**
 
 **Allowing Heroku as Host:**
+
+<!-- - In settings.py add: ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost'] -->
+- Create the Procfile
+- Push the project to Github
+- Connect my github account to Heroku through the Deploy tab
+- Connect my github project repository, and then clicked on the "Deploy" button
 
 # Credits
 
@@ -400,6 +459,7 @@ Resources Used:
 - [Creating Slugs in Models](https://github.com/veryacademy/YT-Django-CBV-Mini-Series/blob/master/CreateView/books/models.py)
 - [Calculator Reset Button - Deleteing all instances from a Django Model](https://www.codegrepper.com/tpc/how+to+delete+all+instances+of+model+in+django)
 - [Hamburger Navbar](https://mdbootstrap.com/docs/b4/jquery/navigation/hamburger-menu/)
+- [Create Array from Specific Classes Texts - JavaScript](https://stackoverflow.com/questions/50850109/create-array-from-specific-classes-texts)
 
 **Images**
 
