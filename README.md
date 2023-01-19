@@ -361,8 +361,6 @@ The solution to fix this on the admin site is for the admin to slightly change t
 
 # Deployment
 
-<!-- TBC -->
-
 This project was deployed on Heroku using Code Institute's I Think Therefore I Blog Videos. After creating a GitHub respository, the steps taken to create the Heroku App were:
 
 **Installing Django and Supporting Libraries:**
@@ -414,8 +412,8 @@ This project was deployed on Heroku using Code Institute's I Think Therefore I B
   if os.path.isfile('env.py'):
       import env
 
-- Replace the insecure secret key provided by Django in settings.py with: SECRET_KEY = os.environ.get('SECRET_KEY')
-<!-- - Connect to the new database by replacing the provided DATABASE variable with: -->
+- Replace the insecure secret key provided by Django in settings.py with: SECRET_KEY = os.environ.get("SECRET_KEY")="mysecretkey"
+- Connect to the new database by commenting out the provided DATABASE variable and adding:
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
@@ -424,17 +422,36 @@ DATABASES = {
 - Save the settings.py file
 - Migrate changes: python3 manage.py migrate
 
+**Connecting Cloudinary:**
+
+- From the Cloudinary dashboard, copy the API Environment variable
+- Add to the env.py file: os.environ["CLOUDINARY_URL"] = "<copied_variable>"
+- In the INSTALLED_APPS list of the settings.py file, above django.contrib.staticfiles add: 'cloudinary_storage',
+- Also add, below django.contrib.staticfiles add: 'cloudinary',
+- Then add to the settings.py, to define Cloudinary as the static file and media storage:
+
+    STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 **Add Heroku Config Vars:**
 
-<!-- - In Heroku dashboard, go to Settings tab
-- Add three new config vars DATABASE_URL (value is database URL), SECRET_KEY (value is secret key string) and PORT (value "8000") -->
-
-**Connecting Cloudinary:**
+- In Heroku dashboard, go to settings tab
+- Add five new config vars:
+    1. DATABASE_URL (value "<copiedURL>")
+    2. SECRET_KEY (value "mysecretkey")
+    3. PORT (value "8000")
+    4. DISABLE_COLLECTSTATIC (value "1") - note that this is a temporary step for the moment and will be removed before deployment
+    5. CLOUDINARY_URL (value "<copied_variable>")
 
 **Allowing Heroku as Host:**
 
-<!-- - In settings.py add: ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost'] -->
-- Create the Procfile
+- Placing under the BASE_DIR line of the settings.py file, replace the templates directory with: TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+- Within the TEMPLATES array of the settings.py file, replace the templates directory with: 'DIRS': [TEMPLATES_DIR],
+- In the settings.py file, add the Heroku Hostname to ALLOWED_HOSTS: ALLOWED_HOSTS = ['havs-calc-db-pp4.herokuapp.com', 'localhost']
+- Create three new folders in the top level directory: "media", "static" and "templates"
+- Create the Procfile and add: web: gunicorn PROJ_NAME.wsgi
+- Save all files
 - Push the project to Github
 - Connect my github account to Heroku through the Deploy tab
 - Connect my github project repository, and then clicked on the "Deploy" button
