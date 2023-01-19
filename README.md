@@ -187,10 +187,14 @@ To further improve data integrity, I decided to create class functions which cal
 
 ## Other Features:
 
-<!-- TBC -->
-
-- Logging In with AllAuth
-- User is informed when they have logged in
+- Users are able to register and sign into the site through django-allauth
+- Success messages have been added to inform the User when they have:
+    a. Logged in
+    b. Logged out
+    c. Added equipment to their calculator
+    d. Edited equipment in their calculator
+    e. Deleted equipment from their calculator
+    f. Reset their calculator
 
 ## Future Features
 
