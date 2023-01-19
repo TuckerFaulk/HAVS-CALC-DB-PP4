@@ -194,13 +194,11 @@ To further improve data integrity, I decided to create class functions which cal
 
 ## Future Features
 
-<!-- TBC -->
-
 - **Add Projects:** As a Site User I can Add a Project so that instead of reseting my calculator for a new task, I can create a new project and add to a new calculator (saving ones previously created to go back to).
 - **Filtering by Category:** As a Site User I can Filter Equipment by Category so that it is easier to find the equipment I am looking for - e.g. browsing through the equipment list.
-- **Equipment Planned Preventative Maintenance (PPM) Management:**
-- **Noise Calculator:**
-- **Add and Filter by Accessories and Ground Conditions:**
+- **Equipment Planned Preventative Maintenance (PPM) Management:** As a Site Admin I can Manage Equipment PPM so that I know when an item is due for a renewal of statutory testing.
+- **Noise Calculator:** As a Site User I can Calculate Noise Exposure Levels so that I can assess the overall exposure to noise of a task.
+- **Add and Filter by Accessories and Ground Conditions:** As a Site User I can Add and Filter Equipment by Accessories and Ground Conditions so that I can improve the accurancy and validity of the calculated results.
 
 # Testing
 
