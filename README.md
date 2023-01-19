@@ -52,13 +52,15 @@ The solution which I came up with was to store all of the required information i
 - Improve the uptake of employees assessing their vibration tasks given all of the information will be available to them and it easy to use
 - Create a place for the management of company equipment. The database provides a central database of tools so the company is aware of what is being used within the business. 
 
-**Personas**
-
-<!-- TBC -->
+**Typical User**
 
 *Site User*
 
+A typical Site User would be a line manager responsible for the health and safety of their colleagues who are exposed to vibration as part of their duties. They will be required to assess the vibration risk exposed to their colleagues and will do this by completing a risk assessment. 
+
 *Site Admin*
+
+A typical Site Admin may be a Health and Safety Manager or a Director within a medium to large organisation whose employees are exposed to vibration as part of their duties. This company may have 100s of employees required to complete a vibration risk assessment on their behalf and/or have 100s of type of vibration equipment which their employees may use as part of their daily tasks.
 
 **User Stories** 
 
