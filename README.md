@@ -64,7 +64,7 @@ A typical Site Admin may be a Health and Safety Manager or a Director within a m
 
 **User Stories** 
 
-As seen above, there will only be two different types of user of this site (Site User and Site Admin). I have broken down my user stories into these two categories. Not all of the user stories have been implmented but have been left to be included at a later date once the site grows.
+As seen above, there will only be two different types of user of this site (Site User and Site Admin). I have broken down my user stories into these two categories:
 
 *As a Site User:*
 
@@ -79,8 +79,6 @@ As seen above, there will only be two different types of user of this site (Site
 9. **View Equipment List**: I can View the Equipment List so that I can ensure the equipment needed for their calculation us available. (4 Story Points)
 10. **View Equipment Details**: I can View Equipment Details so that I can view the exposure limits of various items and decide which equipment is the safest to use. (3 Story Points)
 11. **Equipment Pagination**: I can View a Paginated List of Equipment so that I can easily find equipment and view it's details. (1 Story Points)
-12. **Filter Equipment (Won't Have)**: I can Filter Equipment by Category so that it is easier to find the equipment I am looking for - e.g. browsing through the equipment list. (4 Story Points)
-13. **Add Project (Won't Have)**: I can Add a Project so that instead of reseting my calculator for a new task, I can create a new project and add to a new calculator (saving ones previously created to go back to). (4 Story Points)
 
 *As a Site Admin:*
 
@@ -122,6 +120,14 @@ After initially setting out all of the information required for the site, I used
 *Class Functions*
 
 To further improve data integrity, I decided to create class functions which calculated data values rather than storing this information in each model. As the user was able to update instances within the models which the outcome of the class function calculations were dependant on, keeping these seperate from the model meant that only one instance within the model required updating.
+
+**Visual Design**
+
+I selected 'Raleway' as the main font style to keep the website simple. The logo font of 'Permanent Marker' was used to add some style to the site. This font has also been used for the text links in the nav and for headings to maintain design continuity.
+
+The heading background color of light blue (rgb(108, 171, 221)) was also selected to keep with the minimalist style. I wanted to keep the main background white but then use the colors of the heading background for table hadings to ensure that they were the main central focus of the page. Different colours have been used for the buttons on the site to make these easily distinguishable.
+
+Icons were added to buttons throughout the site to aid the understanding of the functionality of that button.
 
 # Languages Used
 
@@ -182,6 +188,10 @@ To further improve data integrity, I decided to create class functions which cal
 **View Equipment Details**
 
 ![View Equipment Details Page](assets)
+
+## CRUD
+
+<!-- Explain the CRUD Features of the site: site admin and site user -->
 
 ## Other Features:
 
