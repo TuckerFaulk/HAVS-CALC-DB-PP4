@@ -241,7 +241,21 @@ Clicking the Calculate Daily Exposure button ![Calculate Daily Exposure Button](
 
 ## CRUD
 
-<!-- Explain the CRUD Features of the site: site admin and site user -->
+CRUD (Create, Read, Update, and Delete) functionality has been at the center of the design for this website and these features have been included for both of the typical users:
+
+**Site User:**
+
+- CREATE: A site user can add equipment to their calculator
+- READ: A site user can view equipment details in their calculator and also in the equipment list
+- UPDATE: A site user can edit details of equipment in their calculator
+- DELETE: A site user can delete equipment from their calculator
+
+**Site Admin:**
+
+- CREATE: A site admin can add equipment/categories to the equipment/categories list through the admin site
+- READ: A site admin can view details of equipment in the equipment list through the admin site
+- UPDATE: A site admin can edit equipment/categories in the equipment/categories list through the admin site
+- DELETE: A site admin can delete equipment/categories from the equipment/categories list through the admin site
 
 ## Other Features:
 
