@@ -145,8 +145,6 @@ Icons were added to buttons throughout the site to aid the understanding of the 
 
 ### Home Page
 
-<!-- TBC Once the final design of the site has been confirmed -->
-
 ![Home Page](static/readme_images/home-page.jpg)
 
 ### Logo
@@ -175,19 +173,63 @@ Icons were added to buttons throughout the site to aid the understanding of the 
 
 ![Favicon](static/readme_images/android-chrome-192x192.png)
 
+### Account Management
+
+**Sign In**
+
+![Sign In Page](static/readme_images/sign-in.jpg)
+
+**Sign Out**
+
+![Sign Out Page](static/readme_images/sign-out.jpg)
+
+**Register**
+
+![Register Page](static/readme_images/register.jpg)
+
 ### Calculator
 
-![Calculator Page](assets)
+*No Equipment*
+
+![Calculator Page No Equipment](static/readme_images/calculator-no-equipment.jpg)
+
+*With Equipment*
+
+![Calculator Page With Equipment](static/readme_images/calculator-with-equipment.jpg)
 
 **View Calculator Equipment Details**
 
+Clicking the View Calculator Details button ![View Calculator Equipment Details Button](static/readme_images/view-calculator-details-button.jpg) brings you to the following page:
+
+![View Calculator Equipment Details Page](static/readme_images/view-calculator-details.jpg)
+
 **Add Calculator Equipment**
 
-**Edit Equipment Details**
+Clicking the Add Calculator Equipment button ![Add Calculator Equipment Button](static/readme_images/add-equipment-button.jpg) brings you to the following page:
+
+![Add Calculator Equipment Page](static/readme_images/add-equipment.jpg)
+
+**Edit Calculator Equipment Details**
+
+Clicking the Edit Calculator Equipment Details button ![Edit Calculator Equipment Details Button](static/readme_images/edit-equipment-button.jpg) brings you to the following page:
+
+![Edit Calculator Equipment Details Page](static/readme_images/edit-equipment.jpg)
 
 **Delete Calculator Equipment**
 
-**Calculator Button**
+Clicking the Delete Calculator Equipment button ![Delete Calculator Equipment Button](static/readme_images/delete-equipment-button.jpg) brings you to the following page:
+
+![Delete Calculator Equipment Page](static/readme_images/delete-equipment.jpg)
+
+**Reset Calculator**
+
+Clicking the Reset Calculator button ![Reset Calculator Button](static/readme_images/reset-button.jpg) removes all of the equipment from the users calculator.
+
+**Calculate Daily Exposure**
+
+Clicking the Calculate Daily Exposure button ![Calculate Daily Exposure Button](static/readme_images/calculate-daily-exposure-button.jpg) updates the Calculator Page:
+
+![Calculate Daily Exposure](static/readme_images/calculate-daily-exposure.jpg)
 
 ### Equipment
 
