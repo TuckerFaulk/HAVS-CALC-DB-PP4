@@ -318,7 +318,7 @@ CRUD (Create, Read, Update, and Delete) functionality has been at the center of 
 
 ## Debugging
 
-1. Placeholder Image on Equipment/Calculator Detail Pages
+**1. Placeholder Image on Equipment/Calculator Detail Pages**
 
 The placeholder images on the equipment and calculator detail pages were not displaying.
 
@@ -339,7 +339,7 @@ A placeholder image was to be displayed in the equipment and calculator detail p
 *Solution*
 A source link to the folder location was being used instead of reference to the static file location, e.g. {% static 'location/of/file' %}
 
-2. Text formatting of EAV/ELV Specific Control Measures
+**2. Text formatting of EAV/ELV Specific Control Measures**
 
 There was an issue with the text formatting of the reponses under "EAV/ELV Specific Control Measures".
 
@@ -356,7 +356,7 @@ Bullet points were expected to be set on a new line. All of the text was bunchin
 *Solution*
 In the JavaScript function set to add the appropriate response once the 'Calculate Daily Exposure' button is selected, the code was written to only replace the "text" in the html tag. This was changed so the "html" is to be replaced and the response variables were updated to include html formatting.
 
-3. Calculator Slug
+**3. Calculator Slug**
 
 If a user tried to add equipment to their calculator which is the same make and model and exposure duration of an instance already existing in the calculator, an error was displayed as a unique slug could not be created.
 
@@ -382,19 +382,26 @@ The error was being displayed as a unique slug could not be generated. The slug 
 
 <!-- TBC Once the site has been finalised-->
 
-<!-- - PEP8Online: No errors raised in both of the run.py and hangman.py files.
+<!-- - HTML: No errors were returned when passing through the official W3C HTML validator.
 
-*PEP8 Online Checker: run.py file*
+![HTML W3C Validator](static) -->
 
-![PEP8Online Checker run.py file](assets/readme-images/pep8-check-main.jpg)
+- CSS: No errors were found when passing through the official W3C CSS validator.
 
-*PEP8 Online Checker: hangman.py file*
+![CSS W3C Validator](static/readme_images/css-validation.jpg)
 
-![PEP8Online Checker hangman.py file](assets/readme-images/pep8-check-hangman.jpg)
+- JSHint: No errors were found when passing through the JSHint validator.
+
+![JSHint](static/readme_images/jshint.jpg)
+
+<!-- - CI Python Linter: 
+No errors raised 
+
+![CI Python Linter](static) -->
 
 - Lighthouse (Accessibility Audit): The page achieved a great accessibility performance.
 
-![Lighthouse Accessibility Audit](assets/readme-images/lighthouse-check.jpg) -->
+![Lighthouse Accessibility Audit](static/readme_images/lighthouse.jpg)
 
 ## Unfixed Bugs
 

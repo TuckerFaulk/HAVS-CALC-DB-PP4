@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Alert Meassage TimeOut
 
   setTimeout(function () {
-    $('#msg').alert('close')
+    $('#msg').alert('close');
   }, 2500);
 
   /**
@@ -61,14 +61,14 @@ function calculateDailyExposure() {
   // Source: https://stackoverflow.com/questions/50850109/create-array-from-specific-classes-texts
 
   $('.partial-exposure').each(function(){
-    partialExposure.push($(this).text())
+    partialExposure.push($(this).text());
   });
 
-  let dailyExposure = 0
+  let dailyExposure = 0;
 
   for (let i = 0; i < partialExposure.length; i++) {
     dailyExposure += Math.pow(partialExposure[i], 2);
-  };
+  }
 
   dailyExposure = Math.sqrt(dailyExposure);
   dailyExposure = Math.round(dailyExposure * 10) / 10;
@@ -77,7 +77,7 @@ function calculateDailyExposure() {
 
   return dailyExposure;
 
-};
+}
 
 /**
  * Pushes the partial exposure points from the users calculator table into an array.
@@ -88,18 +88,18 @@ function calculateTotalExposurePoints() {
   let partialExposurePts = [];
 
   $('.partial-exposure-pts').each(function(){
-    partialExposurePts.push($(this).text())
+    partialExposurePts.push($(this).text());
   });
 
   let dailyExposurePts = 0;
 
   for (let i = 0; i < partialExposurePts.length; i++) {
     dailyExposurePts += Number(partialExposurePts[i]);
-  };
+  }
 
   $('#daily-exposure-pts').text(dailyExposurePts);
 
-};
+}
 
 /**
  * Displays information in "Exposure Warning" and "EAV/ELV Specific Control Measures to Consider"
@@ -121,5 +121,5 @@ function updateExposureWarnings(dailyExposure) {
     $('#specific-controls').html(belowEAVControls);
   }
 
-};
+}
  
