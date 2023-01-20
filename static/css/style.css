@@ -52,7 +52,6 @@ h1, h2, h3 {
     width: 100%;
 }
 
-
 /* Jumbotron */
 
 .jumbotron {
@@ -112,7 +111,6 @@ h1, h2, h3 {
     border-radius: 15px;
     color: white;
     background-color: rgb(108, 171, 221);
-    /* background-color: #1C2C5B; */
     margin-bottom: 3px;
 }
 
@@ -139,7 +137,7 @@ h1, h2, h3 {
 
 /* Media Queries */
 
-/* For small screen size from 700px wide and down !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* For medium screen sizes from 950px wide*/
 
 @media screen and (max-width: 992px) {
 
@@ -151,10 +149,6 @@ h1, h2, h3 {
         #flex > #b { order: 4; }
         #flex > #c { order: 1; }
         #flex > #c { order: 2; }
-
-}
-
-@media screen and (max-width: 992px) {
 
     .tablet {
         display: none;
@@ -169,6 +163,8 @@ h1, h2, h3 {
     }
 }
 
+/* For small screen sizes from 768px wide*/
+
 @media screen and (max-width: 768px) {
     
     .jumbotron > h1 {
@@ -177,15 +173,13 @@ h1, h2, h3 {
 
 }
 
+/* For smallest screen sizes from 640px wide*/
+
 @media screen and (max-width: 640px) {
 
     .mobile {
         display: none;
     }
-
-}
-
-@media screen and (max-width: 576px) {
 
     #detail-img {
         height: 500px;

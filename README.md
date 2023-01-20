@@ -147,7 +147,7 @@ Icons were added to buttons throughout the site to aid the understanding of the 
 
 <!-- TBC Once the final design of the site has been confirmed -->
 
-![Home Page](assets)
+![Home Page](static/readme_images/home-page.jpg)
 
 ### Logo
 
@@ -179,15 +179,23 @@ Icons were added to buttons throughout the site to aid the understanding of the 
 
 ![Calculator Page](assets)
 
-- Calculator Button
+**View Calculator Equipment Details**
+
+**Add Calculator Equipment**
+
+**Edit Equipment Details**
+
+**Delete Calculator Equipment**
+
+**Calculator Button**
 
 ### Equipment
 
-![Equipment Page](assets)
+![Equipment Page](static/readme_images/equipment.jpg)
 
 **View Equipment Details**
 
-![View Equipment Details Page](assets)
+![View Equipment Details Page](static/readme_images/equipment-detail.jpg)
 
 ## CRUD
 
