@@ -34,6 +34,8 @@ The live link for the site can be found here - https://havs-calc-db-project.hero
 - [Credits](#credits)
   - [Content](#content) -->
 
+<!-- [Back to Top](#table-of-contents) -->
+
 # Overview
 
 This site was developed to address a problem which occured during my previous employment as a Senior Account Manager for a Health and Safety Consultancy. I did at the time develop this solution in Microsoft Excel at the time but thought that this assignment would be a great oppertunity to create a web version of the application.
@@ -171,8 +173,6 @@ An Agile approach was taken for the management of this project.
 - Django
 - SQL (PostgreSQL)
 
-<!-- [Back to Top](#table-of-contents) -->
-
 # Features
 
 ## Existing Features:
@@ -296,12 +296,12 @@ CRUD (Create, Read, Update, and Delete) functionality has been at the center of 
 ## Other Features:
 
 - Users are able to register and sign into the site through django-allauth
-- Success messages have been added to inform the User when they have:
-    a. Logged in
-    b. Logged out
-    c. Added equipment to their calculator
-    d. Edited equipment in their calculator
-    e. Deleted equipment from their calculator
+- Success messages have been added to inform the User when they have:<br/>
+    a. Logged in<br/>
+    b. Logged out<br/>
+    c. Added equipment to their calculator<br/>
+    d. Edited equipment in their calculator<br/>
+    e. Deleted equipment from their calculator<br/>
     f. Reset their calculator
 
 ## Future Features
