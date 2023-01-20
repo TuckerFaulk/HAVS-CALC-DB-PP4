@@ -34,9 +34,7 @@ The live link for the site can be found here - https://havs-calc-db-project.hero
 - [Credits](#credits)
   - [Content](#content) -->
 
-# Design and Planning
-
-**Site Purpose and User Goals**
+# Overview
 
 This site was developed to address a problem which occured during my previous employment as a Senior Account Manager for a Health and Safety Consultancy. I did at the time develop this solution in Microsoft Excel at the time but thought that this assignment would be a great oppertunity to create a web version of the application.
 
@@ -44,13 +42,13 @@ The issue was in relation to Hand Arm Vibrations (HAVS). HAVS is a condition cau
 
 When working for my pervious company, I observed that the companies managers were having difficulty completing this calculator as they found it onerous to get hold of the imformation which they needed to complete it. The company had over 100 peices of equipment in use within the business and all of the vibration magnitude measurements would be stored somewhere on the system where not everyone had access: there were 100s of managers from all parts of the business requiring this information. 
 
-The solution which I came up with was to store all of the required information in a central accessible database which was directly linked to the HAVS Calculator itself. The objectives of this site are to:
+The solution which I came up with was to store all of the required information in a central accessible database which was directly linked to the HAVS Calculator itself.
 
-- Make it quicker and easier for the user to assess a vibration task as all of the information is in a central accessible place
-- Improve the users selection of equipment as they are able to decided to use a tool with a lower magnitude now that this information is available to them
-- Reduce mistakes from potentially transfering incorrect information from testing reports or manufacturers instructions
-- Improve the uptake of employees assessing their vibration tasks given all of the information will be available to them and it easy to use
-- Create a place for the management of company equipment. The database provides a central database of tools so the company is aware of what is being used within the business. 
+# UX
+
+This site was created respecting the Five Planes Of Website Design:
+
+## Strategy
 
 **Typical User**
 
@@ -63,6 +61,8 @@ A typical Site User would be a line manager responsible for the health and safet
 A typical Site Admin may be a Health and Safety Manager or a Director within a medium to large organisation whose employees are exposed to vibration as part of their duties. This company may have 100s of employees required to complete a vibration risk assessment on their behalf and/or have 100s of type of vibration equipment which their employees may use as part of their daily tasks.
 
 **User Stories** 
+
+<!-- Add Epics -->
 
 As seen above, there will only be two different types of user of this site (Site User and Site Admin). I have broken down my user stories into these two categories:
 
@@ -89,6 +89,32 @@ As seen above, there will only be two different types of user of this site (Site
 5. **Edit Categories**: I can Edit a Category so that The correct category can be allocated to equipment. (1 Story Points)
 6. **Delete Categories**: I can Delete a Category so that It is no longer available to be allocated to equipment. (1 Story Points)
 
+The objectives of this site are to:
+
+- Make it quicker and easier for the user to assess a vibration task as all of the information is in a central accessible place
+- Improve the users selection of equipment as they are able to decided to use a tool with a lower magnitude now that this information is available to them
+- Reduce mistakes from potentially transfering incorrect information from testing reports or manufacturers instructions
+- Improve the uptake of employees assessing their vibration tasks given all of the information will be available to them and it easy to use
+- Create a place for the management of company equipment. The database provides a central database of tools so the company is aware of what is being used within the business. 
+
+## Scope
+
+An MVP (Minimum Viable Product) approach was taken to the development of this site. The main features deemed as besic requirements for this site where:
+
+- Account Registration
+- CRUD Functionality (Both Site User and Site Admin)
+- Device Responsiveness
+
+For detailed explanation of all existing features see [Existing Features](#existing-features). While [Future Features](#future-features) where still within the possible scope of this project, they were deemed unnecessary at this point in time.
+
+## Structure
+
+**Site Navigation Flowchart**
+
+![Flowchart](static/readme_images/flowchart.jpg)
+
+## Skeleton
+
 **Wireframes**
 
 *Index Page*
@@ -107,19 +133,17 @@ As seen above, there will only be two different types of user of this site (Site
 
 ![Index Page Wireframe](static/readme_images/equipment-wireframe.jpg)
 
-**Site Navigation Flowchart**
-
-![Flowchart](static/readme_images/flowchart.jpg)
-
-**Data Models/Schema - Classes and Object Oriented Programming**
+**Database Schema**
 
 After initially setting out all of the information required for the site, I used data normalisation to structure each relational model to help reduce data redundancy and improve data integrity.
 
-![Data Schema](static/readme_images/data_schema.jpg)
+![Database Schema](static/readme_images/data_schema.jpg)
 
 *Class Functions*
 
 To further improve data integrity, I decided to create class functions which calculated data values rather than storing this information in each model. As the user was able to update instances within the models which the outcome of the class function calculations were dependant on, keeping these seperate from the model meant that only one instance within the model required updating.
+
+## Surface
 
 **Visual Design**
 
@@ -128,6 +152,14 @@ I selected 'Raleway' as the main font style to keep the website simple. The logo
 The heading background color of light blue (rgb(108, 171, 221)) was also selected to keep with the minimalist style. I wanted to keep the main background white but then use the colors of the heading background for table hadings to ensure that they were the main central focus of the page. Different colours have been used for the buttons on the site to make these easily distinguishable.
 
 Icons were added to buttons throughout the site to aid the understanding of the functionality of that button.
+
+# Agile Methodology
+
+An Agile approach was taken for the management of this project. 
+
+- User stories were written for each of the sites features. These included details of both acceptance criteria and the a list of tasks required to complete them.
+- The user stories where then managed in a Kanban board which was created in [GitHub Projects](https://github.com/users/TuckerFaulk/projects/4/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%2C%22Milestone%22%5D). The kanban board was split into three columns: To do, In Progress, and Done.
+- User stories were then prioritized with the MoSCoW approach and labels where used to manage this.
 
 # Languages Used
 
@@ -139,9 +171,13 @@ Icons were added to buttons throughout the site to aid the understanding of the 
 - Django
 - SQL (PostgreSQL)
 
+<!-- [Back to Top](#table-of-contents) -->
+
 # Features
 
 ## Existing Features:
+
+<!-- Add explainations to each section -->
 
 ### Home Page
 
@@ -420,6 +456,7 @@ The solution to fix this on the admin site is for the admin to slightly change t
 - Cloudinary: Serving static media files
 - ElephantSQL: PostgreSQL database hosting
 - Google Chrome, Microsoft Edge, Mozilla Firefox, Safari: Site testing on alternative browsers
+- Chrome Dev Tools: Debugging and CSS testing of the site
 - Microsoft OneNote: Planning notes for the project
 - Microsoft Whiteboard: Developing wireframes
 - Am I Responsive: Screenshots of the final project for the README file
@@ -543,7 +580,7 @@ I have again enjoyed learning with the Code Institute and completing my four ass
 
 ## Content
 
-Resources Used:
+**Resources Used:**
 
 - Code Institutes 'I Think Therefore I Blog Videos'
 - @Ed B_alum CI Project-Portfolio-4 Slack Channel - Filtering each Calculator to only Display the Logged in Users Equipment
@@ -559,7 +596,7 @@ Resources Used:
 - [Hamburger Navbar](https://mdbootstrap.com/docs/b4/jquery/navigation/hamburger-menu/)
 - [Create Array from Specific Classes Texts - JavaScript](https://stackoverflow.com/questions/50850109/create-array-from-specific-classes-texts)
 
-**Images**
+**Images:**
 
 *Jumbotron Image*
 
