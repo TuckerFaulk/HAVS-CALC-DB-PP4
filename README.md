@@ -141,9 +141,11 @@ After initially setting out all of the information required for the site, I used
 
 ![Database Schema](static/readme_images/data_schema.jpg)
 
-*Class Functions*
+*Class Functions and JavaScript Functions*
 
 To further improve data integrity, I decided to create class functions which calculated data values rather than storing this information in each model. As the user was able to update instances within the models which the outcome of the class function calculations were dependant on, keeping these seperate from the model meant that only one instance within the model required updating.
+
+This is also inclusive of the JavaScript Functions which update the users calculator page. These functions have been written in JavaScript rather than in the Django Calculator Model as the information required for these calculations can be multiple instances of equipment in users calculator.
 
 ## Surface
 

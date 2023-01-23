@@ -28,7 +28,7 @@ class TestViews(TestCase):
             author=self.user,
             updated_on='2023-01-23',
             category=self.category,
-            vibration_magnitude=1.0,
+            vibration_magnitude=5.5,
             test_date='2023-01-23',
             equipment_image='placeholder',
         )
