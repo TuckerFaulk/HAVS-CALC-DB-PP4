@@ -8,7 +8,7 @@ from calculator.models import Categories, Equipment, Calculator
 
 
 class TestViews(TestCase):
-
+    """Tests Views"""
     def setUp(self):
         """
         Sets up the user and models for the tests
@@ -28,17 +28,17 @@ class TestViews(TestCase):
             author=self.user,
             updated_on='2023-01-23',
             category=self.category,
-            vibration_magnitude='1.0',
+            vibration_magnitude=1.0,
             test_date='2023-01-23',
             equipment_image='placeholder',
         )
 
-        Calculator.objects.create(
+        self.calculator = Calculator.objects.create(
             make_and_model=self.equipment,
             author=self.user,
             slug='john-equipment1-1-30-8a1xu',
-            exposure_duration_hours='1',
-            exposure_duration_minutes='30',
+            exposure_duration_hours=1,
+            exposure_duration_minutes=30,
         )
 
         self.index_url = reverse('index')
@@ -53,7 +53,7 @@ class TestViews(TestCase):
 
     def test_index(self):
         """
-        Successfully loading the Index View
+        Tests Index View
         """
         response = self.client.get(self.index_url)
 
@@ -62,7 +62,7 @@ class TestViews(TestCase):
 
     def test_calculator_list_GET(self):
         """
-        Successfully loading the Calculator View
+        Tests Calculator View
         """
         self.client.login(username='john', password='johnpassword')
         response = self.client.get(self.calculator_list_url)
@@ -72,7 +72,7 @@ class TestViews(TestCase):
 
     def test_calculator_detail_GET(self):
         """
-        Successfully loading the Calculator Detail View
+        Tests Calculator Detail View
         """
         self.client.login(username='john', password='johnpassword')
         response = self.client.get(self.calculator_detail_url)
@@ -82,7 +82,7 @@ class TestViews(TestCase):
 
     def test_calculator_create_GET(self):
         """
-        Successfully loading the Add Calculator View
+        Tests Add Calculator View
         """
         self.client.login(username='john', password='johnpassword')
         response = self.client.get(self.calculator_create_url)
@@ -92,7 +92,7 @@ class TestViews(TestCase):
 
     def test_calculator_edit_GET(self):
         """
-        Successfully loading the Edit Calculator View
+        Tests Edit Calculator View
         """
         self.client.login(username='john', password='johnpassword')
         response = self.client.get(self.calculator_edit_url)
@@ -102,7 +102,7 @@ class TestViews(TestCase):
 
     def test_calculator_delete_GET(self):
         """
-        Successfully loading the Delete Calculator View
+        Tests Delete Calculator View
         """
         self.client.login(username='john', password='johnpassword')
         response = self.client.get(self.calculator_delete_url)
@@ -112,7 +112,7 @@ class TestViews(TestCase):
 
     def test_calculator_delete_all_GET(self):
         """
-        Successfully loading the Delete All View
+        Tests Delete All View
         """
         self.client.login(username='john', password='johnpassword')
         response = self.client.get(self.calculator_delete_all_url)
@@ -122,7 +122,7 @@ class TestViews(TestCase):
 
     def test_equipment_list_GET(self):
         """
-        Successfully loading the Equipment List View
+        Tests Equipment List View
         """
         response = self.client.get(self.equipment_list_url)
 
@@ -131,7 +131,7 @@ class TestViews(TestCase):
 
     def test_equipment_detail_GET(self):
         """
-        Successfully loading the Equipment Detail View
+        Tests Equipment Detail View
         """
         response = self.client.get(self.equipment_detail_url)
 
