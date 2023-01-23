@@ -3,6 +3,7 @@ from django.contrib.auth import get_user_model
 from calculator.models import Categories, Equipment, Calculator
 
 # Add tests such as for models.CharField(max_length=50, unique=True)
+# update john lennon
 
 
 class TestModels(TestCase):

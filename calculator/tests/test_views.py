@@ -3,8 +3,11 @@ from django.urls import reverse
 from django.contrib.auth import get_user_model
 from calculator.models import Categories, Equipment, Calculator
 
-# Add Documentation, Consider POST Tests, checking info displayed on DOM
-# Redirecting to the Calculator after adding equipment
+# Consider POST Tests, checking info displayed on DOM
+# Redirecting to the Calculator after adding equipment - pieterkdevilliers
+# Test if login page redirects to calculator
+# Test if the calculator page renders only the equipment added by the user
+# https://github.com/useriasminna/italianissimo-booking-website/blob/main/booking/tests.py
 
 
 class TestViews(TestCase):
