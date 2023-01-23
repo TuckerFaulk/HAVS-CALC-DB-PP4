@@ -316,6 +316,16 @@ CRUD (Create, Read, Update, and Delete) functionality has been at the center of 
 
 # Testing
 
+## Automated Testing
+
+Automated testing has been completed for the Django files "models.py", "urls.py", and "views.py".
+
+The [Coverage](https://coverage.readthedocs.io/en/7.0.5/) library was use during testing to help monitor test coverage.
+
+The Coverage library states that tests carried out provide an overall coverage of 98%.
+
+![Coverage Report](static/readme_images/coverage-report.jpg)
+
 ## Manual Test of User Stories:
 
 ***As a Site User:***
@@ -478,6 +488,7 @@ The solution to fix this on the admin site is for the admin to slightly change t
 - Django-crispy-forms (1.14.0)
 - Gunicorn (20.1.0)
 - Psycopg2 (2.9.5)
+- Coverage (7.0.5)
 
 # Deployment
 
