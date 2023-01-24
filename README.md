@@ -34,8 +34,6 @@ The live link for the site can be found here - https://havs-calc-db-project.hero
 - [Credits](#credits)
   - [Content](#content) -->
 
-<!-- [Back to Top](#table-of-contents) -->
-
 # Overview
 
 This site was developed to address a problem which occured during my previous employment as a Senior Account Manager for a Health and Safety Consultancy. I did at the time develop this solution in Microsoft Excel at the time but thought that this assignment would be a great oppertunity to create a web version of the application.
@@ -68,26 +66,30 @@ As seen above, there will only be two different types of user of this site (Site
 
 *As a Site User:*
 
-1. **Account Registration**: I can Register an Account so that I can access the system to assess a task with the calculator. (4 Story Points)
-2. **View Calculator**: I can View the Calulator so that I can start to assess the vibration exposure of a new task. (4 Story Points)
-3. **Add Equipment to Calculator**: I can Add Equipment to a new Project so that I can include the equipment being used during a task to then assess the vibration exposure. (2 Story Points)
-4. **View Calculator Equipment Details**: I can View Calculator Equipment Details so that I can view the partial exposure limits of the item. (3 Story Points)
-5. **Edit Equipment Details in Calculator**: I can Edit Equipment Details in an Existing Project so that I can update equipment details where the duration of use has changed. (2 Story Points)
-6. **Delete Equipment in Calculator**: I can Delete Equipment in an Existing Project so that I can remove equipment which my no longer be used in a task. (2 Story Points)
-7. **Reset Calculator**: I can Reset Calculator so that I can assess a new task. (1 Story Points)
-8. **Calculate Exposure Details**: I can Calculate Exposure Details so that I can assess the overall exposure to vibartion of a task. (3 Story Points)
-9. **View Equipment List**: I can View the Equipment List so that I can ensure the equipment needed for their calculation us available. (4 Story Points)
-10. **View Equipment Details**: I can View Equipment Details so that I can view the exposure limits of various items and decide which equipment is the safest to use. (3 Story Points)
-11. **Equipment Pagination**: I can View a Paginated List of Equipment so that I can easily find equipment and view it's details. (1 Story Points)
+| Epic   |   ID   |      User Story     |  Story Points |
+|--------|:------:|:--------------------|:-------------:|
+|Calculator|1A|**View Calculator**: I can View the Calulator so that I can start to assess the vibration exposure of a new task.|4|
+||1B|**Add Equipment to Calculator**: I can Add Equipment to a new Project so that I can include the equipment being used during a task to then assess the vibration exposure.|2|
+||1C|**View Calculator Equipment Details**: I can View Calculator Equipment Details so that I can view the partial exposure limits of the item.|3|
+||1D|**Edit Equipment Details in Calculator**: I can Edit Equipment Details in an Existing Project so that I can update equipment details where the duration of use has changed.|2|
+||1E|**Delete Equipment in Calculator**: I can Delete Equipment in an Existing Project so that I can remove equipment which my no longer be used in a task.|2|
+||1F|**Reset Calculator**: I can Reset Calculator so that I can assess a new task.|1|
+||1G|**Calculate Exposure Details**: I can Calculate Exposure Details so that I can assess the overall exposure to vibartion of a task.|3|
+|Equipment (Site User)|2A|**View Equipment List**: I can View the Equipment List so that I can ensure the equipment needed for their calculation us available.|4|
+||2B|**View Equipment Details**: I can View Equipment Details so that I can view the exposure limits of various items and decide which equipment is the safest to use.|3|
+|Supplementary Site Features|3A|**Account Registration**: I can Register an Account so that I can access the system to assess a task with the calculator.|4|
+||3B|**Equipment Pagination**: I can View a Paginated List of Equipment so that I can easily find equipment and view it's details.|1|
 
 *As a Site Admin:*
 
-1. **Add equipment**: I can Add Equipment so that It is available for a user to included it within a calculator. (3 Story Points)
-2. **Edit Equipment Details**: I can Edit Equipment Details so that The most up to date information is available to the user. (1 Story Points)
-3. **Delete Equipment**: I can Delete Equipment so that It is no longer available to be used in a calculator. (1 Story Points)
-4. **Add Categories**: I can Add a Category so that It is available to be allocated to equipment. (3 Story Points)
-5. **Edit Categories**: I can Edit a Category so that The correct category can be allocated to equipment. (1 Story Points)
-6. **Delete Categories**: I can Delete a Category so that It is no longer available to be allocated to equipment. (1 Story Points)
+| Epic   |   ID   |      User Story     |  Story Points |
+|--------|:------:|:--------------------|:-------------:|
+|Equipment (Site Admin)|4A|**Add equipment**: I can Add Equipment so that It is available for a user to included it within a calculator.|3|
+||4B|**Edit Equipment Details**: I can Edit Equipment Details so that The most up to date information is available to the user.|1|
+||4C|**Delete Equipment**: I can Delete Equipment so that It is no longer available to be used in a calculator.|1|
+||4D|**Add Categories**: I can Add a Category so that It is available to be allocated to equipment.|3|
+||4E|**Edit Categories**: I can Edit a Category so that The correct category can be allocated to equipment.|1|
+||4F|**Delete Categories**: I can Delete a Category so that It is no longer available to be allocated to equipment.|1|
 
 The objectives of this site are to:
 
@@ -431,8 +433,6 @@ The error was being displayed as a unique slug could not be generated. The slug 
 
 ## Validator Testing
 
-<!-- TBC Once the site has been finalised-->
-
 - HTML: All html files were input into the checker and the Jinja code was removed to avoid errors. No errors were returned when passing through the official W3C HTML validator. 
 
 ![HTML W3C Validator](static/readme_images/html-w3c-validator.jpg)
@@ -698,3 +698,5 @@ I have again enjoyed learning with the Code Institute and completing my four ass
 - [Belle Ranger 450](https://www.machinemart.co.uk/p/altrad-belle-ranger-450-lombardini-floor-saw/)
 - [Bosch GST150BCE](https://www.toolstop.co.uk/bosch-gst150bce-150mm-780w-bow-handle-jigsaw-110v-p12559/)
 - [Makita DTW190](https://www.tooled-up.com/makita-dtw190-18v-cordless-lxt-1-2-drive-impact-wrench/prod/291078/)
+
+[Back to Top](#table-of-contents)
