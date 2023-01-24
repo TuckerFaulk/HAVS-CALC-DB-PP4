@@ -1,6 +1,9 @@
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
-from calculator.views import Index, CalculatorListView, CalculatorDetail, CalculatorCreateView, CalculatorEditView, CalculatorDeleteView, DeleteAll, EquipmentListView, EquipmentDetail
+from calculator.views import (Index, CalculatorListView, CalculatorDetail,
+                              CalculatorCreateView, CalculatorEditView,
+                              CalculatorDeleteView, DeleteAll,
+                              EquipmentListView, EquipmentDetail)
 
 
 class TestUrls(SimpleTestCase):

@@ -445,10 +445,67 @@ The error was being displayed as a unique slug could not be generated. The slug 
 
 ![JSHint](static/readme_images/jshint.jpg)
 
-<!-- - CI Python Linter: 
-No errors raised 
+- CI Python Linter: No errors were returned when passing through the Code Institute Python Linter.
 
-![CI Python Linter](static) -->
+<details>
+<summary>Calculator - CI Python Linter Screenshots</summary>
+
+*admin.py*
+
+![Admin - CI Python Linter](static/readme_images/admin-ci-linter.jpg)
+
+*apps.py*
+
+![Apps - CI Python Linter](static/readme_images/apps-ci-linter.jpg)
+
+*forms.py*
+
+![Forms - CI Python Linter](static/readme_images/forms-ci-linter.jpg)
+
+*models.py*
+
+![Models - CI Python Linter](static/readme_images/models-ci-linter.jpg)
+
+*urls.py*
+
+![URLs - CI Python Linter](static/readme_images/urls-ci-linter.jpg)
+
+*views.py*
+
+![Views - CI Python Linter](static/readme_images/views-ci-linter.jpg)
+
+</details>
+<br/>
+<details>
+<summary>Havscalcdb - CI Python Linter Screenshots</summary>
+
+*settings.py*
+
+![Settings - CI Python Linter](static/readme_images/settings-ci-linter.jpg)
+
+*urls.py*
+
+![URLs - CI Python Linter](static/readme_images/urls-havscalcdb-ci-linter.jpg)
+
+</details>
+<br/>
+<details>
+<summary>Tests - CI Python Linter Screenshots</summary>
+
+*test_models.py*
+
+![Test_Models - CI Python Linter](static/readme_images/test-models-ci-linter.jpg)
+
+*test_urls.py*
+
+![Test_URLs - CI Python Linter](static/readme_images/test-urls-ci-linter.jpg)
+
+*test_views.py*
+
+![Test_Views - CI Python Linter](static/readme_images/test-views-ci-linter.jpg)
+
+</details>
+<br/>
 
 - Lighthouse (Accessibility Audit): The page achieved a great accessibility performance.
 

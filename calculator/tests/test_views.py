@@ -46,13 +46,20 @@ class TestViews(TestCase):
 
         self.index_url = reverse('index')
         self.calculator_list_url = reverse('calculator_list')
-        self.calculator_detail_url = reverse('calculator_detail', args=['john-equipment1-1-30-8a1xu'])
+        self.calculator_detail_url = reverse('calculator_detail',
+                                             args=[
+                                                'john-equipment1-1-30-8a1xu'])
         self.calculator_create_url = reverse('add_calculator')
-        self.calculator_edit_url = reverse('edit_calculator', args=['john-equipment1-1-30-8a1xu'])
-        self.calculator_delete_url = reverse('delete_calculator', args=['john-equipment1-1-30-8a1xu'])
+        self.calculator_edit_url = reverse('edit_calculator',
+                                           args=[
+                                            'john-equipment1-1-30-8a1xu'])
+        self.calculator_delete_url = reverse('delete_calculator',
+                                             args=[
+                                                'john-equipment1-1-30-8a1xu'])
         self.calculator_delete_all_url = reverse('delete_all')
         self.equipment_list_url = reverse('equipment_list')
-        self.equipment_detail_url = reverse('equipment_detail', args=['equipment1'])
+        self.equipment_detail_url = reverse('equipment_detail',
+                                            args=['equipment1'])
 
     def test_index(self):
         """

@@ -19,5 +19,8 @@ class EquipmentAdmin(admin.ModelAdmin):
 class CalculatorAdmin(admin.ModelAdmin):
     """Registers the calculator model on the django admin site"""
 
-    list_display = ('make_and_model', 'slug', 'author', 'exposure_duration_hours', 'exposure_duration_minutes')
-    prepopulated_fields = {'slug': ('author', 'make_and_model', 'exposure_duration_hours', 'exposure_duration_minutes')}
+    list_display = ('make_and_model', 'slug', 'author',
+                    'exposure_duration_hours', 'exposure_duration_minutes')
+    prepopulated_fields = {'slug': ('author', 'make_and_model',
+                                    'exposure_duration_hours',
+                                    'exposure_duration_minutes')}

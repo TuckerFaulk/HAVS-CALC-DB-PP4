@@ -44,7 +44,8 @@ class CalculatorDetail(View):
         )
 
 
-class CalculatorCreateView(messages.views.SuccessMessageMixin, generic.CreateView):
+class CalculatorCreateView(messages.views.SuccessMessageMixin,
+                           generic.CreateView):
     """View which displays a form to add equipment to the calculator"""
     model = Calculator
     form_class = CalculatorForm
@@ -52,13 +53,17 @@ class CalculatorCreateView(messages.views.SuccessMessageMixin, generic.CreateVie
     success_url = '/calculator/'
     success_message = "Equipment successfully added!"
 
-    # Source: https://stackoverflow.com/questions/72033344/set-the-logged-in-user-to-created-by-for-django-createview
+    """
+    Source: https://stackoverflow.com/questions/72033344/
+    set-the-logged-in-user-to-created-by-for-django-createview
+    """
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
 
-class CalculatorEditView(messages.views.SuccessMessageMixin, generic.UpdateView):
+class CalculatorEditView(messages.views.SuccessMessageMixin,
+                         generic.UpdateView):
     """
     View which displays a form to edit equipment
     details in the calculator
@@ -82,17 +87,24 @@ class CalculatorDeleteView(generic.DeleteView):
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, self.success_message)
-        return super(CalculatorDeleteView, self).delete(request, *args, **kwargs)
+        return super(CalculatorDeleteView, self).delete(request, *args,
+                                                        **kwargs)
 
 
-# Source https://www.codegrepper.com/tpc/how+to+delete+all+instances+of+model+in+django
+"""
+Source https://www.codegrepper.com/tpc/
+how+to+delete+all+instances+of+model+in+django
+"""
+
+
 def DeleteAll(request):
     """
     View which deletes all equipment from a users
     calculator
     """
     Calculator.objects.filter(author=request.user).delete()
-    messages.add_message(request, messages.SUCCESS, 'You have successfully reset your calculator!')
+    messages.add_message(request, messages.SUCCESS, """You have
+                         successfully reset your calculator!""")
     context = {}
     return render(request, 'calculator.html', context)
 
