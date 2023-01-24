@@ -58,9 +58,9 @@
 
       <!-- Source: Code Institute - I Think Therefore I Blog Videos -->
       {% if "placeholder" in equipment.equipment_image.url %}
-      <img id="detail-img" src="https://res.cloudinary.com/dzqdaqlba/image/upload/v1673519796/static/images/placeholder-img.acf334564419.jpg" alt="placeholder image">
+      <img class="detail-img" src="https://res.cloudinary.com/dzqdaqlba/image/upload/v1673519796/static/images/placeholder-img.acf334564419.jpg" alt="placeholder image">
       {% else %}
-      <img id="detail-img" src="{{ equipment.equipment_image.url }}" alt="{{ equipment.make_and_model }}">
+      <img class="detail-img" src="{{ equipment.equipment_image.url }}" alt="{{ equipment.make_and_model }}">
       {% endif %}
       
     </div>

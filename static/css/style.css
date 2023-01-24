@@ -23,13 +23,13 @@ h1, h2, h3 {
 
 /* Header & Navbar */
 
-#logo {
+.logo {
     font-size: xx-large;
     font-family: 'Permanent Marker', sans-serif;
     color: white;
 }
 
-#logo:hover {
+.logo:hover {
     text-decoration: none;
 }
 
@@ -87,7 +87,7 @@ h1, h2, h3 {
 
 /* Equipment and Calculator Detail */
 
-#detail-img {
+.detail-img {
     height: 500px;
     width: 400px;
     padding-left: 50px;

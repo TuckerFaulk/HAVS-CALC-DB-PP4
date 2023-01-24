@@ -64,8 +64,6 @@ A typical Site Admin may be a Health and Safety Manager or a Director within a m
 
 **User Stories** 
 
-<!-- Add Epics -->
-
 As seen above, there will only be two different types of user of this site (Site User and Site Admin). I have broken down my user stories into these two categories:
 
 *As a Site User:*
@@ -435,9 +433,9 @@ The error was being displayed as a unique slug could not be generated. The slug 
 
 <!-- TBC Once the site has been finalised-->
 
-<!-- - HTML: No errors were returned when passing through the official W3C HTML validator.
+- HTML: All html files were input into the checker and the Jinja code was removed to avoid errors. No errors were returned when passing through the official W3C HTML validator. 
 
-![HTML W3C Validator](static) -->
+![HTML W3C Validator](static/readme_images/html-w3c-validator.jpg)
 
 - CSS: No errors were found when passing through the official W3C CSS validator.
 
