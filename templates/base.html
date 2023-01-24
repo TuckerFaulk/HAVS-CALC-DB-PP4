@@ -27,8 +27,11 @@
     
     <!-- Logo -->
     <div class="pl-3 d-flex justify-content-start align-items-center">
-      <a class="text-gold" href="#" id="logo">HAVS <span class="dark-blue">| CALC |</span> DB</a>
-      <!-- Add Href -->
+      {% if user.is_authenticated %}
+        <a href="{% url 'calculator_list' %}" id="logo">HAVS <span class="dark-blue">| CALC |</span> DB</a>
+      {% else %}
+        <a href="{% url 'index' %}" id="logo">HAVS <span class="dark-blue">| CALC |</span> DB</a>
+      {% endif %}
     </div>
     
     <!-- Collapse button -->
