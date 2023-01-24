@@ -4,9 +4,13 @@
 
 <div class="container">
   <div class="row m-4 justify-content-center">
+
+    <!-- List of Equipment -->
+
     {% for equipment in equipment_list %}
     <div class="card" style="width: 18rem;">
 
+      <!-- Image of the Equipment (or placeholder where one has not been uploaded) -->
       <!-- Source: Code Institute - I Think Therefore I Blog Videos -->
       {% if "placeholder" in equipment.equipment_image.url %}
       <img class="card-img-top" src="https://res.cloudinary.com/dzqdaqlba/image/upload/v1673519796/static/images/placeholder-img.acf334564419.jpg" alt="placeholder image">
@@ -22,6 +26,7 @@
     {% endfor %}
   </div>
 
+  <!-- List Pagination (Limits to 6 items page page) -->
   <!-- Source: Code Institute - I Think Therefore I Blog Videos -->
   {% if is_paginated %}
     <nav aria-label="Page navigation">
