@@ -7,6 +7,7 @@ from .forms import CalculatorForm, EquipmentForm
 
 
 def Index(request):
+    """View which displays the home page"""
     return render(request, 'index.html', {})
 
 
@@ -14,6 +15,11 @@ def Index(request):
 
 
 class CalculatorListView(generic.ListView):
+    """
+    View which displays the calculator. The view is
+    filtered by userso they can only see the equipment
+    which they have added.
+    """
     model = Calculator
     queryset = Calculator.objects.order_by('make_and_model')
     template_name = 'calculator.html'
@@ -26,7 +32,7 @@ class CalculatorListView(generic.ListView):
 
 
 class CalculatorDetail(View):
-
+    """View which displays the calculator equipment details"""
     def get(self, request, slug, *args, **kwargs):
         calculator_info = Calculator.objects.all()
         calculator = get_object_or_404(calculator_info, slug=slug)
@@ -39,6 +45,7 @@ class CalculatorDetail(View):
 
 
 class CalculatorCreateView(messages.views.SuccessMessageMixin, generic.CreateView):
+    """View which displays a form to add equipment to the calculator"""
     model = Calculator
     form_class = CalculatorForm
     template_name = 'add-calculator.html'
@@ -52,6 +59,10 @@ class CalculatorCreateView(messages.views.SuccessMessageMixin, generic.CreateVie
 
 
 class CalculatorEditView(messages.views.SuccessMessageMixin, generic.UpdateView):
+    """
+    View which displays a form to edit equipment
+    details in the calculator
+    """
     model = Calculator
     form_class = CalculatorForm
     template_name = 'edit-calculator.html'
@@ -60,6 +71,10 @@ class CalculatorEditView(messages.views.SuccessMessageMixin, generic.UpdateView)
 
 
 class CalculatorDeleteView(generic.DeleteView):
+    """
+    View which displays a page to request user to
+    confirm they are deleting equipment from their calculator
+    """
     model = Calculator
     template_name = 'delete-calculator.html'
     success_url = '/calculator/'
@@ -72,6 +87,10 @@ class CalculatorDeleteView(generic.DeleteView):
 
 # Source https://www.codegrepper.com/tpc/how+to+delete+all+instances+of+model+in+django
 def DeleteAll(request):
+    """
+    View which deletes all equipment from a users
+    calculator
+    """
     Calculator.objects.filter(author=request.user).delete()
     messages.add_message(request, messages.SUCCESS, 'You have successfully reset your calculator!')
     context = {}
@@ -82,6 +101,7 @@ def DeleteAll(request):
 
 
 class EquipmentListView(generic.ListView):
+    """View which displays a list of equipment"""
     model = Equipment
     queryset = Equipment.objects.all()
     template_name = 'equipment.html'
@@ -89,7 +109,7 @@ class EquipmentListView(generic.ListView):
 
 
 class EquipmentDetail(View):
-
+    """View which displays equipment details"""
     def get(self, request, slug, *args, **kwargs):
         equipment_info = Equipment.objects.all()
         equipment = get_object_or_404(equipment_info, slug=slug)
