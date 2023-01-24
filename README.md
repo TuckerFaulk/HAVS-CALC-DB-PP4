@@ -5,34 +5,30 @@
 The live link for the site can be found here - https://havs-calc-db-project.herokuapp.com/
 
 # Table of Contents
-<!-- - [Design and Planning](#design-and-planning)
-  - [Logo Font and Color](#logo-font-and-color)
-  - [Error Messages](#error-messages)
-  - [Game Process Planning Flow Chart](#game-process-planning-flow-chart)
+- [Overview](#overview)
+- [UX](#ux)
+  - [Strategy](#strategy)
+  - [Scope](#scope)
+  - [Structure](#structure)
+  - [Skeleton](#skeleton)
+  - [Surface](#surface)
 - [Languages Used](#languages-used)
 - [Features](#features)
   - [Existing Features](#existing-features)
-    - [Logo and Subtitle](#logo-and-subtitle)
-    - [How to Play](#how-to-play)
-    - [Select Difficulty](#select-difficulty)
-    - [Select Category](#select-category)
-    - [Main Game Area](#main-game-area)
-    - [Other Features](#other-features)
-      - [Guess Answer](#guess-answer)
-      - [Adding Game Categories and Answer](#adding-game-categories-and-answers)
+  - [CRUD](#crud)
+  - [Other Features](#other-features)
   - [Future Features](#future-features)
-- [Data Model](#data-model)
-  - [Classes and Object Oriented Programming](#classes-and-object-oriented-programming)
 - [Testing](#testing)
-  - [Test of User Story](#test-of-user-story-game-functionality)
-  - [Test on Alternative Browsers](#test-on-alternative-browsers)
+  - [Automated Testing](#automated-testing)
+  - [Manual Test of User Stories](#manual-test-of-user-stories)
+  - [Test on Alternative Browsers and Screen Size](#test-on-alternative-browsers-and-screen-size)
   - [Debugging](#debugging)
   - [Validator Testing](#validator-testing)
   - [Unfixed Bugs](#unfixed-bugs)
   - [Libraries and Programs Used](#libraries-and-programs-used)
 - [Deployment](#deployment)
 - [Credits](#credits)
-  - [Content](#content) -->
+  - [Content](#content)
 
 # Overview
 
@@ -178,7 +174,7 @@ An Agile approach was taken for the management of this project.
 
 # Features
 
-## Existing Features:
+## Existing Features
 
 <!-- Add explainations to each section -->
 
@@ -296,7 +292,7 @@ CRUD (Create, Read, Update, and Delete) functionality has been at the center of 
 - UPDATE: A site admin can edit equipment/categories in the equipment/categories list through the admin site
 - DELETE: A site admin can delete equipment/categories from the equipment/categories list through the admin site
 
-## Other Features:
+## Other Features
 
 - Users are able to register and sign into the site through django-allauth
 - Success messages have been added to inform the User when they have:<br/>
@@ -331,7 +327,7 @@ The Coverage library states that tests carried out provide an overall coverage o
 
 ![Coverage Report](static/readme_images/coverage-report.jpg)
 
-## Manual Test of User Stories:
+## Manual Test of User Stories
 
 ***As a Site User:***
 
