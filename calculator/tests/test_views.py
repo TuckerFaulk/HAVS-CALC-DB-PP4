@@ -3,12 +3,6 @@ from django.urls import reverse
 from django.contrib.auth import get_user_model
 from calculator.models import Categories, Equipment, Calculator
 
-# Consider POST Tests, checking info displayed on DOM
-# Redirecting to the Calculator after adding equipment - pieterkdevilliers
-# Test if login page redirects to calculator
-# Test if the calculator page renders only the equipment added by the user
-# https://github.com/useriasminna/italianissimo-booking-website/blob/main/booking/tests.py
-
 
 class TestViews(TestCase):
     """Tests Views"""
@@ -20,7 +14,7 @@ class TestViews(TestCase):
         User = get_user_model()
         self.client = Client()
         self.user = User.objects.create_user(
-            'john', 'lennon@thebeatles.com', 'johnpassword')
+            'tom', 'test@test.com', 'tompassword')
 
         self.category = Categories.objects.create(
             category='Breaker',
@@ -39,7 +33,7 @@ class TestViews(TestCase):
         self.calculator = Calculator.objects.create(
             make_and_model=self.equipment,
             author=self.user,
-            slug='john-equipment1-1-30-8a1xu',
+            slug='tom-equipment1-1-30-8a1xu',
             exposure_duration_hours=1,
             exposure_duration_minutes=30,
         )
@@ -48,14 +42,14 @@ class TestViews(TestCase):
         self.calculator_list_url = reverse('calculator_list')
         self.calculator_detail_url = reverse('calculator_detail',
                                              args=[
-                                                'john-equipment1-1-30-8a1xu'])
+                                                'tom-equipment1-1-30-8a1xu'])
         self.calculator_create_url = reverse('add_calculator')
         self.calculator_edit_url = reverse('edit_calculator',
                                            args=[
-                                            'john-equipment1-1-30-8a1xu'])
+                                            'tom-equipment1-1-30-8a1xu'])
         self.calculator_delete_url = reverse('delete_calculator',
                                              args=[
-                                                'john-equipment1-1-30-8a1xu'])
+                                                'tom-equipment1-1-30-8a1xu'])
         self.calculator_delete_all_url = reverse('delete_all')
         self.equipment_list_url = reverse('equipment_list')
         self.equipment_detail_url = reverse('equipment_detail',
@@ -74,7 +68,7 @@ class TestViews(TestCase):
         """
         Tests Calculator View
         """
-        self.client.login(username='john', password='johnpassword')
+        self.client.login(username='tom', password='tompassword')
         response = self.client.get(self.calculator_list_url)
 
         self.assertEquals(response.status_code, 200)
@@ -84,7 +78,7 @@ class TestViews(TestCase):
         """
         Tests Calculator Detail View
         """
-        self.client.login(username='john', password='johnpassword')
+        self.client.login(username='tom', password='tompassword')
         response = self.client.get(self.calculator_detail_url)
 
         self.assertEquals(response.status_code, 200)
@@ -94,7 +88,7 @@ class TestViews(TestCase):
         """
         Tests Add Calculator View
         """
-        self.client.login(username='john', password='johnpassword')
+        self.client.login(username='tom', password='tompassword')
         response = self.client.get(self.calculator_create_url)
 
         self.assertEquals(response.status_code, 200)
@@ -104,7 +98,7 @@ class TestViews(TestCase):
         """
         Tests Edit Calculator View
         """
-        self.client.login(username='john', password='johnpassword')
+        self.client.login(username='tom', password='tompassword')
         response = self.client.get(self.calculator_edit_url)
 
         self.assertEquals(response.status_code, 200)
@@ -114,7 +108,7 @@ class TestViews(TestCase):
         """
         Tests Delete Calculator View
         """
-        self.client.login(username='john', password='johnpassword')
+        self.client.login(username='tom', password='tompassword')
         response = self.client.get(self.calculator_delete_url)
 
         self.assertEquals(response.status_code, 200)
@@ -124,7 +118,7 @@ class TestViews(TestCase):
         """
         Tests Delete All View
         """
-        self.client.login(username='john', password='johnpassword')
+        self.client.login(username='tom', password='tompassword')
         response = self.client.get(self.calculator_delete_all_url)
 
         self.assertEquals(response.status_code, 200)

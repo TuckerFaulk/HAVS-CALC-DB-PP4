@@ -2,9 +2,6 @@ from django.test import TestCase
 from django.contrib.auth import get_user_model
 from calculator.models import Categories, Equipment, Calculator
 
-# Add tests such as for models.CharField(max_length=50, unique=True)
-# update john lennon
-
 
 class TestModels(TestCase):
     """Tests Models"""
@@ -14,7 +11,7 @@ class TestModels(TestCase):
         """
         User = get_user_model()
         self.user = User.objects.create_user(
-            'john', 'lennon@thebeatles.com', 'johnpassword')
+            'tom', 'test@test.com', 'tompassword')
 
         self.category = Categories.objects.create(
             category='Breaker',
@@ -33,7 +30,7 @@ class TestModels(TestCase):
         self.calculator = Calculator.objects.create(
             make_and_model=self.equipment,
             author=self.user,
-            slug='john-equipment1-1-30-8a1xu',
+            slug='tom-equipment1-1-30-8a1xu',
             exposure_duration_hours=1,
             exposure_duration_minutes=30,
         )
