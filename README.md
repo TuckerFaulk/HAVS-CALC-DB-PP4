@@ -173,6 +173,7 @@ An Agile approach was taken for the management of this project.
 - JQuery
 - Python
 - Django
+- Unittest (Django’s unit tests Python standard library module)
 - SQL (PostgreSQL)
 
 # Features
@@ -318,7 +319,11 @@ CRUD (Create, Read, Update, and Delete) functionality has been at the center of 
 
 ## Automated Testing
 
-Automated testing has been completed for the Django files "models.py", "urls.py", and "views.py".
+Automated testing has been completed using Django’s unit tests Python standard library module Unittest for the Django files "models.py", "urls.py", and "views.py".
+
+All 24 tests carried out have passed:
+
+![Test Report](static/readme_images/test-report.jpg)
 
 The [Coverage](https://coverage.readthedocs.io/en/7.0.5/) library was use during testing to help monitor test coverage.
 
