@@ -25,7 +25,7 @@ The live link for the site can be found here - https://havs-calc-db-project.hero
   - [Debugging](#debugging)
   - [Validator Testing](#validator-testing)
   - [Unfixed Bugs](#unfixed-bugs)
-  - [Libraries and Programs Used](#libraries-and-programs-used)
+- [Libraries and Programs Used](#libraries-and-programs-used)
 - [Deployment](#deployment)
 - [Credits](#credits)
   - [Content](#content)
@@ -176,9 +176,9 @@ An Agile approach was taken for the management of this project.
 
 ## Existing Features
 
-<!-- Add explainations to each section -->
-
 ### Home Page
+
+- The home page provides context of what the site does and how it can provide benefit to the user.
 
 ![Home Page](static/readme_images/home-page.jpg)
 
@@ -224,6 +224,10 @@ An Agile approach was taken for the management of this project.
 
 ### Calculator
 
+- The calculator page is where users can calculate the daily vibration magnitude of equipmwnt used during a task
+- Each user has there own seperate calculator which they can add, edit and remove equipment from
+- The calculator starts empty after the user has first registered, then displays all equipment which has been added during previous use
+
 *No Equipment*
 
 ![Calculator Page No Equipment](static/readme_images/calculator-no-equipment.jpg)
@@ -234,11 +238,19 @@ An Agile approach was taken for the management of this project.
 
 **View Calculator Equipment Details**
 
+- The calculator details page shows the users all of the specific equipment details related to the instance within their calculator
+- Although on large screen all of this information is available in the calculator, a picture of the tool provides benefit to the user
+- The calculator details page becomes more useful to the user on smaller screens: the smaller the screen used, the less information displayed in the calculator to improve responsive design
+
 Clicking the View Calculator Details button ![View Calculator Equipment Details Button](static/readme_images/view-calculator-details-button.jpg) brings you to the following page:
 
 ![View Calculator Equipment Details Page](static/readme_images/view-calculator-details.jpg)
 
 **Add Calculator Equipment**
+
+- Users are able to add equipment to their calculator by completing a single form
+- A dropdown menu is available giving the user an option to select from all of the equipment added by the site admin
+- Validation has been added to the form, including "Exposure Duration Hours" to be equal to or less than 23 and "Exposure Duration Minutes" to be equal to or less than 59 (calculations are completed on a single days tasks: <24 Hours)
 
 Clicking the Add Calculator Equipment button ![Add Calculator Equipment Button](static/readme_images/add-equipment-button.jpg) brings you to the following page:
 
@@ -246,11 +258,16 @@ Clicking the Add Calculator Equipment button ![Add Calculator Equipment Button](
 
 **Edit Calculator Equipment Details**
 
+- Users are able to edit equipment details in their calculator by completing a single form
+
 Clicking the Edit Calculator Equipment Details button ![Edit Calculator Equipment Details Button](static/readme_images/edit-equipment-button.jpg) brings you to the following page:
 
 ![Edit Calculator Equipment Details Page](static/readme_images/edit-equipment.jpg)
 
 **Delete Calculator Equipment**
+
+- Users are able to delete equipment from their calculator
+- A confimation page has been added to avoid a user from accidentally deleting equipment
 
 Clicking the Delete Calculator Equipment button ![Delete Calculator Equipment Button](static/readme_images/delete-equipment-button.jpg) brings you to the following page:
 
@@ -258,9 +275,22 @@ Clicking the Delete Calculator Equipment button ![Delete Calculator Equipment Bu
 
 **Reset Calculator**
 
+- Users are able to deleting all equipment by reseting their calculator
+
 Clicking the Reset Calculator button ![Reset Calculator Button](static/readme_images/reset-button.jpg) removes all of the equipment from the users calculator.
 
 **Calculate Daily Exposure**
+
+- A user can Calculate the Daily Exposure of all of the equipment added to their calculator
+- Once this is selected, all of the following is updated:
+  a. EAV/ELV Specific Control Measures to Consider
+  b. Exposure Warning
+  c. Daily Exposure m/s² A(8)
+  d. Total Exposure Points
+- The information updated in the "EAV/ELV Specific Control Measures to Consider" and the "Exposure Warning" will depend on the Daily Exposure calculated. There are three levels based on the Exposure Action Value (2.5 m/s² A(8)) and Exposure Limit Value (5 m/s² A(8)): 
+  a. Below 2.5 m/s² A(8)
+  b. At or above 2.5 m/s² A(8)
+  c. Above 5m/s² A(8).
 
 Clicking the Calculate Daily Exposure button ![Calculate Daily Exposure Button](static/readme_images/calculate-daily-exposure-button.jpg) updates the Calculator Page:
 
@@ -268,9 +298,15 @@ Clicking the Calculate Daily Exposure button ![Calculate Daily Exposure Button](
 
 ### Equipment
 
+- The equipment page displays a list of all of the equipment the site admin has added to the database and is available to be added to the calculator
+- The list is paginated so the user does not have to keep scrolling to find the equipment they want
+
 ![Equipment Page](static/readme_images/equipment.jpg)
 
 **View Equipment Details**
+
+- The equipment details page provides the user with information on the exposure limits of items so that they can compare and decide which equipment is the safest to use (lowest vibration magnitude).
+- This page also provides details of when the last vibration measurement test was completed. If this was completed several years before, the user may want to request for this equipment to be retested.
 
 ![View Equipment Details Page](static/readme_images/equipment-detail.jpg)
 
