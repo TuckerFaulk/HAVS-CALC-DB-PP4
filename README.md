@@ -696,6 +696,7 @@ I have again enjoyed learning with the Code Institute and completing my four ass
 - [Calculator Reset Button - Deleting all instances from a Django Model](https://www.codegrepper.com/tpc/how+to+delete+all+instances+of+model+in+django)
 - [Hamburger Navbar](https://mdbootstrap.com/docs/b4/jquery/navigation/hamburger-menu/)
 - [Create Array from Specific Classes Texts - JavaScript](https://stackoverflow.com/questions/50850109/create-array-from-specific-classes-texts)
+- [Django Testing](https://www.youtube.com/watch?v=qwypH3YvMKc&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM&index=1)
 
 **Images:**
 
