@@ -32,11 +32,11 @@ The live link for the site can be found here - https://havs-calc-db-project.hero
 
 # Overview
 
-This site was developed to address a problem which occured during my previous employment as a Senior Account Manager for a Health and Safety Consultancy. I did at the time develop this solution in Microsoft Excel at the time but thought that this assignment would be a great oppertunity to create a web version of the application.
+This site was developed to address a problem which occurred during my previous employment as a Senior Account Manager for a Health and Safety Consultancy. I did at the time develop this solution in Microsoft Excel at the time but thought that this assignment would be a great opportunity to create a web version of the application.
 
-The issue was in relation to Hand Arm Vibrations (HAVS). HAVS is a condition caused by exposure of the hands and arms to vibration when using hand held tools. To prevent over exposure to vibration, the Health and Safety Executive created a HAVS Calculator so you could calculate whether an individual would be exposed to a cumilative magnitude above actions levels or limits based upon to tools which were being used during the day and how long they were being used for.
+The issue was in relation to Hand Arm Vibrations (HAVS). HAVS is a condition caused by exposure of the hands and arms to vibration when using hand held tools. To prevent over exposure to vibration, the Health and Safety Executive created a HAVS Calculator so you could calculate whether an individual would be exposed to a cumulative magnitude above actions levels or limits based upon to tools which were being used during the day and how long they were being used for.
 
-When working for my pervious company, I observed that the companies managers were having difficulty completing this calculator as they found it onerous to get hold of the imformation which they needed to complete it. The company had over 100 peices of equipment in use within the business and all of the vibration magnitude measurements would be stored somewhere on the system where not everyone had access: there were 100s of managers from all parts of the business requiring this information. 
+When working for my pervious company, I observed that the companies managers were having difficulty completing this calculator as they found it onerous to get hold of the information which they needed to complete it. The company had over 100 pieces of equipment in use within the business and all of the vibration magnitude measurements would be stored somewhere on the system where not everyone had access: there were 100s of managers from all parts of the business requiring this information. 
 
 The solution which I came up with was to store all of the required information in a central accessible database which was directly linked to the HAVS Calculator itself.
 
@@ -64,13 +64,13 @@ As seen above, there will only be two different types of user of this site (Site
 
 | Epic   |   ID   |      User Story     |  Story Points |
 |--------|:------:|:--------------------|:-------------:|
-|Calculator|1A|**View Calculator**: I can View the Calulator so that I can start to assess the vibration exposure of a new task.|4|
+|Calculator|1A|**View Calculator**: I can View the Calculator so that I can start to assess the vibration exposure of a new task.|4|
 ||1B|**Add Equipment to Calculator**: I can Add Equipment to a new Project so that I can include the equipment being used during a task to then assess the vibration exposure.|2|
 ||1C|**View Calculator Equipment Details**: I can View Calculator Equipment Details so that I can view the partial exposure limits of the item.|3|
 ||1D|**Edit Equipment Details in Calculator**: I can Edit Equipment Details in an Existing Project so that I can update equipment details where the duration of use has changed.|2|
 ||1E|**Delete Equipment in Calculator**: I can Delete Equipment in an Existing Project so that I can remove equipment which my no longer be used in a task.|2|
 ||1F|**Reset Calculator**: I can Reset Calculator so that I can assess a new task.|1|
-||1G|**Calculate Exposure Details**: I can Calculate Exposure Details so that I can assess the overall exposure to vibartion of a task.|3|
+||1G|**Calculate Exposure Details**: I can Calculate Exposure Details so that I can assess the overall exposure to vibration of a task.|3|
 |Equipment (Site User)|2A|**View Equipment List**: I can View the Equipment List so that I can ensure the equipment needed for their calculation us available.|4|
 ||2B|**View Equipment Details**: I can View Equipment Details so that I can view the exposure limits of various items and decide which equipment is the safest to use.|3|
 |Supplementary Site Features|3A|**Account Registration**: I can Register an Account so that I can access the system to assess a task with the calculator.|4|
@@ -90,14 +90,14 @@ As seen above, there will only be two different types of user of this site (Site
 The objectives of this site are to:
 
 - Make it quicker and easier for the user to assess a vibration task as all of the information is in a central accessible place
-- Improve the users selection of equipment as they are able to decided to use a tool with a lower magnitude now that this information is available to them
-- Reduce mistakes from potentially transfering incorrect information from testing reports or manufacturers instructions
+- Improve the users selection of equipment as they are able to decide to use a tool with a lower magnitude now that this information is available to them
+- Reduce mistakes from potentially transferring incorrect information from testing reports or manufacturer's instructions
 - Improve the uptake of employees assessing their vibration tasks given all of the information will be available to them and it easy to use
 - Create a place for the management of company equipment. The database provides a central database of tools so the company is aware of what is being used within the business. 
 
 ## Scope
 
-An MVP (Minimum Viable Product) approach was taken to the development of this site. The main features deemed as besic requirements for this site where:
+An MVP (Minimum Viable Product) approach was taken to the development of this site. The main features deemed as basic requirements for this site where:
 
 - Account Registration
 - CRUD Functionality (Both Site User and Site Admin)
@@ -139,7 +139,7 @@ After initially setting out all of the information required for the site, I used
 
 *Class Functions and JavaScript Functions*
 
-To further improve data integrity, I decided to create class functions which calculated data values rather than storing this information in each model. As the user was able to update instances within the models which the outcome of the class function calculations were dependant on, keeping these seperate from the model meant that only one instance within the model required updating.
+To further improve data integrity, I decided to create class functions which calculated data values rather than storing this information in each model. As the user was able to update instances within the models which the outcome of the class function calculations were dependant on, keeping these separate from the model meant that only one instance within the model required updating.
 
 This is also inclusive of the JavaScript Functions which update the users calculator page. These functions have been written in JavaScript rather than in the Django Calculator Model as the information required for these calculations can be multiple instances of equipment in users calculator.
 
@@ -149,7 +149,7 @@ This is also inclusive of the JavaScript Functions which update the users calcul
 
 I selected 'Raleway' as the main font style to keep the website simple. The logo font of 'Permanent Marker' was used to add some style to the site. This font has also been used for the text links in the nav and for headings to maintain design continuity.
 
-The heading background color of light blue (rgb(108, 171, 221)) was also selected to keep with the minimalist style. I wanted to keep the main background white but then use the colors of the heading background for table hadings to ensure that they were the main central focus of the page. Different colours have been used for the buttons on the site to make these easily distinguishable.
+The heading background colour of light blue (rgb(108, 171, 221)) was also selected to keep with the minimalist style. I wanted to keep the main background white but then use the colours of the heading background for table headings to ensure that they were the main central focus of the page. Different colours have been used for the buttons on the site to make these easily distinguishable.
 
 Icons were added to buttons throughout the site to aid the understanding of the functionality of that button.
 
@@ -224,8 +224,8 @@ An Agile approach was taken for the management of this project.
 
 ### Calculator
 
-- The calculator page is where users can calculate the daily vibration magnitude of equipmwnt used during a task
-- Each user has there own seperate calculator which they can add, edit and remove equipment from
+- The calculator page is where users can calculate the daily vibration magnitude of equipment used during a task
+- Each user has their own separate calculator which they can add, edit and remove equipment from
 - The calculator starts empty after the user has first registered, then displays all equipment which has been added during previous use
 
 *No Equipment*
@@ -267,7 +267,7 @@ Clicking the Edit Calculator Equipment Details button ![Edit Calculator Equipmen
 **Delete Calculator Equipment**
 
 - Users are able to delete equipment from their calculator
-- A confimation page has been added to avoid a user from accidentally deleting equipment
+- A confirmation page has been added to avoid a user from accidentally deleting equipment
 
 Clicking the Delete Calculator Equipment button ![Delete Calculator Equipment Button](static/readme_images/delete-equipment-button.jpg) brings you to the following page:
 
@@ -275,7 +275,7 @@ Clicking the Delete Calculator Equipment button ![Delete Calculator Equipment Bu
 
 **Reset Calculator**
 
-- Users are able to deleting all equipment by reseting their calculator
+- Users are able to deleting all equipment by resetting their calculator
 
 Clicking the Reset Calculator button ![Reset Calculator Button](static/readme_images/reset-button.jpg) removes all of the equipment from the users calculator.
 
@@ -312,7 +312,7 @@ Clicking the Calculate Daily Exposure button ![Calculate Daily Exposure Button](
 
 ## CRUD
 
-CRUD (Create, Read, Update, and Delete) functionality has been at the center of the design for this website and these features have been included for both of the typical users:
+CRUD (Create, Read, Update, and Delete) functionality has been at the centre of the design for this website and these features have been included for both of the typical users:
 
 **Site User:**
 
@@ -341,11 +341,11 @@ CRUD (Create, Read, Update, and Delete) functionality has been at the center of 
 
 ## Future Features
 
-- **Add Projects:** As a Site User I can Add a Project so that instead of reseting my calculator for a new task, I can create a new project and add to a new calculator (saving ones previously created to go back to).
+- **Add Projects:** As a Site User I can Add a Project so that instead of resetting my calculator for a new task, I can create a new project and add to a new calculator (saving ones previously created to go back to).
 - **Filtering by Category:** As a Site User I can Filter Equipment by Category so that it is easier to find the equipment I am looking for - e.g. browsing through the equipment list.
 - **Equipment Planned Preventative Maintenance (PPM) Management:** As a Site Admin I can Manage Equipment PPM so that I know when an item is due for a renewal of statutory testing.
 - **Noise Calculator:** As a Site User I can Calculate Noise Exposure Levels so that I can assess the overall exposure to noise of a task.
-- **Add and Filter by Accessories and Ground Conditions:** As a Site User I can Add and Filter Equipment by Accessories and Ground Conditions so that I can improve the accurancy and validity of the calculated results.
+- **Add and Filter by Accessories and Ground Conditions:** As a Site User I can Add and Filter Equipment by Accessories and Ground Conditions so that I can improve the accuracy and validity of the calculated results.
 
 # Testing
 
@@ -370,13 +370,13 @@ The Coverage library states that tests carried out provide an overall coverage o
 | Test   |      Expected     |  Passed |
 |-------|:------------------|:--------:|
 |I can Register an Account so that I can access the system to assess a task with the calculator.|- User is able to login<br/>- User is able to logout<br/>- User is able to register for an account|☑|
-|I can View the Calulator so that I can start to assess the vibration exposure of a new task.|- The user is able to view their own calculator<br/> - The calculator should be blank if they have not added any equipment previously<br/>- The calculator should display any previously added equipment|☑|
+|I can View the Calculator so that I can start to assess the vibration exposure of a new task.|- The user is able to view their own calculator<br/> - The calculator should be blank if they have not added any equipment previously<br/>- The calculator should display any previously added equipment|☑|
 |I can Add Equipment to a new Project so that I can include the equipment being used during a task to then assess the vibration exposure.|- Button should be available for the user to add equipment to their own calculator<br/>- Form is displayed requesting the user to add their information<br/>- The form includes validation to ensure it has been completed and no invalid values have been input<br/>- Submit button is available for the user to confirm their addition<br/>- Details of the equipment added should be included into the users calculator|☑|
 |I can View Calculator Equipment Details so that I can view the partial exposure limits of the item.|- Button is available for each equipment instance in the calculator to view more details of that item<br/>- Once the button is clicked, the correct details of the equipment selected are displayed<br/>- The information which should be displayed on the details page is:<br/>    a. Category - Make and Model<br/>    b. Vibration Magnitude<br/>    c. Exposure Duration<br/>    d. Exposure Points per Hour<br/>    e. Time to reach EAV<br/>    f. Time to reach ELV<br/>    g. Partial Exposure<br/>    h. Partial Exposure Points<br/>    i. An image of the equipment (or placeholder image)<br/>- A 'Back' button should also be available on the details page so the user can return to the calculator|☑|
 |I can Edit Equipment Details in an Existing Project so that I can update equipment details where the duration of use has changed.|- Button is available for the user to click when they want to edit a calculator equipment instance<br/>- The correct details of the selected instance are displayed<br/>- These details can be edited by the user<br/>- A submit button is available for the user to confirm any changes made<br/>- The edited instance in the user's calculator has been updated|☑|
 |I can Delete Equipment in an Existing Project so that I can remove equipment which my no longer be used in a task.|- Button is available for the user to click when they want to delete a calculator equipment instance<br/>- The correct details of the selected instance are displayed<br/>- A submit button is available for the user to confirm they want to delete<br/>- A cancel button is available if they do not want to delete<br/>- The deleted instance in the user's calculator has been removed|☑|
 |I can Reset Calculator so that I can assess a new task.|- Button is available for the user to click when they want to reset their calculator<br/>- Once the button has been seleted, all of the instances in the user's calculator have been removed|☑|
-|I can Calculate Exposure Details so that I can assess the overall exposure to vibartion of a task.|- The following fields are calculated and displayed in the user's calculator:<br/>    a. Exposure Points per Hour<br/>    b. Time to reach EAV<br/>    c. Time to reach ELV<br/>    d. Partial Exposure<br/>    e. Partial Exposure Points<br/>- Button is available on the user's calculator to click when they want to calculate the overall exposure<br/>- Once the button has been clicked, the calculator updates the following fields:<br/>    a. Daily Exposure<br/>    b. Total Exposure Points<br/>    c. Exposure Warning<br/>    d. EAV/ELV Specific Control Measures to Consider|☑|
+|I can Calculate Exposure Details so that I can assess the overall exposure to vibration of a task.|- The following fields are calculated and displayed in the user's calculator:<br/>    a. Exposure Points per Hour<br/>    b. Time to reach EAV<br/>    c. Time to reach ELV<br/>    d. Partial Exposure<br/>    e. Partial Exposure Points<br/>- Button is available on the user's calculator to click when they want to calculate the overall exposure<br/>- Once the button has been clicked, the calculator updates the following fields:<br/>    a. Daily Exposure<br/>    b. Total Exposure Points<br/>    c. Exposure Warning<br/>    d. EAV/ELV Specific Control Measures to Consider|☑|
 |I can View the Equipment List so that I can ensure the equipment needed for their calculation us available.|- The user is able to view a list of all of the equipment in the database<br/>- This list should display an image (or placeholder image) of the equipment and detail the category and Make and Model of the item|☑|
 |I can View Equipment Details so that I can view the exposure limits of various items and decide which equipment is the safest to use.|- Button is available for each item on the Equipment List to view more details of that item<br/>- Once the button is clicked, the correct details of the equipment selected are displayed<br/>- The information which should be displayed on the details page is:<br/>    a. Category - Make and Model<br/>    b. Vibration Magnitude<br/>    c. Exposure Points per Hour<br/>    d. Time to reach EAV<br/>    e. Time to reach ELV<br/>    f. Date Tested<br/>    g. Date Added<br/>    h. Name of the user the equipment was added by<br/>    i. An image of the equipment (or placeholder image)<br/>- A 'Back' button should also be available on the details page so the user can return to the equipment list|☑|
 |I can view a paginated list of equipment so that I can easily find equipment and view it's details.|- User is able to cycle through a list of equipment<br/>- User is able to view a previous page of equipment<br/>- User is limited to six items of equipment per page|☑|
@@ -385,10 +385,10 @@ The Coverage library states that tests carried out provide an overall coverage o
 
 | Test   |      Expected     |  Passed |
 |--------|:------------------|:--------:|
-|I can Add Equipment so that It is available for a user to included it within a calculator.|- The site admin is able to log into the django app site admin page<br/>- Equipment has been registered on this page and is available to select once logged in<br/>- Once on the equipment list on the admin site, an 'add equipment' button is available<br/>- A form is displayed requesting the admin to add the equipments information<br/>- The form includes validation to ensure it has been completed and no invalid values have been input<br/>- Save button is available for the admin to confirm their addition<br/>- Details of the equipment added should be included into the admins site equipment list and the websites equipment list|☑|
+|I can Add Equipment so that It is available for a user to included it within a calculator.|- The site admin is able to log into the Django app site admin page<br/>- Equipment has been registered on this page and is available to select once logged in<br/>- Once on the equipment list on the admin site, an 'add equipment' button is available<br/>- A form is displayed requesting the admin to add the equipment's information<br/>- The form includes validation to ensure it has been completed and no invalid values have been input<br/>- Save button is available for the admin to confirm their addition<br/>- Details of the equipment added should be included into the admins site equipment list and the websites equipment list|☑|
 |I can Edit Equipment Details so that The most up to date information is available to the user.|- Button is available for the admin to click when they want to edit an equipment instance<br/>- The correct details of the selected instance are displayed<br/>- These details can be edited by the admin<br/>- A save button is available for the admin to confirm any changes made<br/>- The instance of the equipment edited should be updated the admins site equipment list and the websites equipment list|☑|
 |I can Delete Equipment so that It is no longer available to be used in a calculator.|- Button is available for the admin to click when they want to delete an equipment instance<br/>- The deleted instance of the equipment should be removed the admins site equipment list and the websites equipment list|☑|
-|I can Add a Category so that It is available to be allocated to equipment.|- The site admin is able to log into the django app site admin page<br/>- Categories has been registered on this page and is available to select once logged in<br/>- Once on the categories list on the admin site, an 'add category' button is available<br/>- A form is displayed requesting the admin to add the category<br/>- The form includes validation to ensure it has been completed and no invalid values have been input<br/>- Save button is available for the admin to confirm their addition<br/>- The category added should be included into the admins site category list and should be available to select when equipment is being added|☑|
+|I can Add a Category so that It is available to be allocated to equipment.|- The site admin is able to log into the Django app site admin page<br/>- Categories has been registered on this page and is available to select once logged in<br/>- Once on the categories list on the admin site, an 'add category' button is available<br/>- A form is displayed requesting the admin to add the category<br/>- The form includes validation to ensure it has been completed and no invalid values have been input<br/>- Save button is available for the admin to confirm their addition<br/>- The category added should be included into the admins site category list and should be available to select when equipment is being added|☑|
 |I can Edit a Category so that The correct category can be allocated to equipment.|- Button is available for the admin to click when they want to edit a category instance<br/>- The correct details of the selected instance are displayed<br/>- These details can be edited by the admin<br/>- A save button is available for the admin to confirm any changes made<br/>- The instance of the category edited should be updated the admins site categories list and should be available to select when equipment is being added|☑|
 |I can Delete a Category so that It is no longer available to be allocated to equipment.|- Button is available for the admin to click when they want to delete a category instance<br/>- The deleted instance of the category should be removed the admins site category list and should not be available to be selected when equipment is being added|☑|
 
@@ -412,13 +412,13 @@ It is noted that the correct "alt" text was being displayed in the images place 
 It is also noted that the cloudinary images were being displayed.
 
 *To Reproduce*
-Steps to reproduce the behavior:
+Steps to reproduce the behaviour:
 
 a. Go to 'https://havs-calc-db-pp4.herokuapp.com/equipment/'
 b. Click on 'View Details' of an equipment with a placeholder image in list view
 c. See error: Alt text displaying instead of the placeholder image
 
-*Expected behavior*
+*Expected behaviour*
 A placeholder image was to be displayed in the equipment and calculator detail pages where a user has not uploaded an image.
 
 *Solution*
@@ -426,16 +426,16 @@ A source link to the folder location was being used instead of reference to the 
 
 **2. Text formatting of EAV/ELV Specific Control Measures**
 
-There was an issue with the text formatting of the reponses under "EAV/ELV Specific Control Measures".
+There was an issue with the text formatting of the responses under "EAV/ELV Specific Control Measures".
 
 *To Reproduce*
-Steps to reproduce the behavior:
+Steps to reproduce the behaviour:
 
 a. Go to 'https://8000-tuckerfaulk-havscalcdbp-zn557uvrtgy.ws-eu82.gitpod.io/calculator/'
 b. Click on 'Calculate Daily Exposure'
 c. See error: text incorrectly formatted under "EAV/ELV Specific Control Measures"
 
-*Expected behavior*
+*Expected behaviour*
 Bullet points were expected to be set on a new line. All of the text was bunching into a single paragraph.
 
 *Solution*
@@ -446,7 +446,7 @@ In the JavaScript function set to add the appropriate response once the 'Calcula
 If a user tried to add equipment to their calculator which is the same make and model and exposure duration of an instance already existing in the calculator, an error was displayed as a unique slug could not be created.
 
 *To Reproduce*
-Steps to reproduce the behavior:
+Steps to reproduce the behaviour:
 
 a. Go to 'https://8000-tuckerfaulk-havscalcdbp-zn557uvrtgy.ws-eu82.gitpod.io/calculator/'
 b. Click on 'Add Equipment'
@@ -457,7 +457,7 @@ f. Add equipment again but insert the same "make and model" and "exposure durati
 g. Submit form
 h. See error
 
-*Expected behavior*
+*Expected behaviour*
 Once a form is submitted, the new equipment should be displayed in the calculator even if this is a duplication of what has already been added.
 
 *Solution*
@@ -544,7 +544,7 @@ The error was being displayed as a unique slug could not be generated. The slug 
 When adding equipment to the calculator model in the admin site, if the data inserted is exactly the same as what already exists, a validation error will pop-up stating "Calculator with this Slug already exists". 
 
 1. This has been fixed when adding equipment to the calculator model from the live site (most likely the only place this would be added).
-2. From a UX perspective, it is unlikely that this error will ever occur as a user would just update the expsoure time of the existing instance, rather than having a duplication.
+2. From a UX perspective, it is unlikely that this error will ever occur as a user would just update the exposure time of the existing instance, rather than having a duplication.
 
 The solution to fix this on the admin site is for the admin to slightly change the slug themselves and this will then work.
 
@@ -580,7 +580,7 @@ The solution to fix this on the admin site is for the admin to slightly change t
 
 # Deployment
 
-This project was deployed on Heroku using Code Institute's I Think Therefore I Blog Videos. After creating a GitHub respository, the steps taken to create the Heroku App were:
+This project was deployed on Heroku using Code Institute's I Think Therefore I Blog Videos. After creating a GitHub repository, the steps taken to create the Heroku App were:
 
 **Installing Django and Supporting Libraries:**
 
@@ -609,7 +609,7 @@ This project was deployed on Heroku using Code Institute's I Think Therefore I B
 - Log into ElephantSQL
 - Click "Create New Instance"
 - Set up a plan by giving it a name and select the "Tiny Turtle" plan.
-- Click "Select Region" and choose the appropriate data center (nearest by location)
+- Click "Select Region" and choose the appropriate data centre (nearest by location)
 - Click "Review"
 - Check all details and click "Create Instance"
 - Return to dashboard and click on the name of the newly created database instance
@@ -693,7 +693,7 @@ I have again enjoyed learning with the Code Institute and completing my four ass
 - [Setting the logged in user to created_by for Django Views](https://stackoverflow.com/questions/72033344/set-the-logged-in-user-to-created-by-for-django-createview)
 - [Very Academy YouTube Channel - Django Class-Based Views Playlist](https://www.youtube.com/watch?v=GxA2I-n8NR8&list=PLOLrQ9Pn6caxNb9eFZJ6LfY29nZkKmmXT)
 - [Creating Slugs in Models](https://github.com/veryacademy/YT-Django-CBV-Mini-Series/blob/master/CreateView/books/models.py)
-- [Calculator Reset Button - Deleteing all instances from a Django Model](https://www.codegrepper.com/tpc/how+to+delete+all+instances+of+model+in+django)
+- [Calculator Reset Button - Deleting all instances from a Django Model](https://www.codegrepper.com/tpc/how+to+delete+all+instances+of+model+in+django)
 - [Hamburger Navbar](https://mdbootstrap.com/docs/b4/jquery/navigation/hamburger-menu/)
 - [Create Array from Specific Classes Texts - JavaScript](https://stackoverflow.com/questions/50850109/create-array-from-specific-classes-texts)
 
