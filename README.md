@@ -479,10 +479,6 @@ The error was being displayed as a unique slug could not be generated. The slug 
 <details>
 <summary>Havscalcdb - CI Python Linter Screenshots</summary>
 
-*settings.py*
-
-![Settings - CI Python Linter](static/readme_images/settings-ci-linter.jpg)
-
 *urls.py*
 
 ![URLs - CI Python Linter](static/readme_images/urls-havscalcdb-ci-linter.jpg)
